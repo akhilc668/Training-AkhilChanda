@@ -16,12 +16,12 @@ public class ListIteratorDemo {
 		ll.addFirst("Sai");
 		ll.addLast("Krishna");
 		ListIterator<String> li=ll.listIterator();
-		while(li.hasNext()) {
-			System.out.print(li.next()+" ");
+		while(li.hasNext()) {//it search the next value is there or not//
+			System.out.print(li.next()+" ");//it the next value//
 		}
 		System.out.println("\n============================================");
-		while(li.hasPrevious()) {
-			System.out.print(li.previous()+" ");
+		while(li.hasPrevious()) {//it search the previous value is there or not//
+			System.out.print(li.previous()+" ");//it the previous value//
 		}
 		System.out.println("\n==============================================");
 				
