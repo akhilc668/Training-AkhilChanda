@@ -25,16 +25,16 @@ class Redmi extends Mobile{
 
 class Oneplus extends Mobile{
  void cost(){
-  System.out.println("Prize of Redmi is: 45000");
+  System.out.println("Prize of Oneplus is: 45000");
  }
  void ram(){
-  System.out.println("Ram of Redmi is: 8GB");
+  System.out.println("Ram of Oneplus is: 8GB");
  }
  void harddisk(){
-  System.out.println("Harddisk of Redmi is: 256GB");
+  System.out.println("Harddisk of Oneplus is: 256GB");
  }
  void camera_pexcel(){
-  System.out.println("camera_pexcel of Redmi is: 45px");
+  System.out.println("camera_pexcel of Oneplus is: 45px");
  }
 }
 
@@ -53,7 +53,7 @@ class MobileFactory{
 }
 class FactoryMethodDemo{
 public static void main(String args[]){
-Mobile x=MobileFactory.getMobile("Redmi");
+Mobile x=MobileFactory.getMobile(args[0]);
 x.cost();
 x.ram();
 x.camera_pexcel();
