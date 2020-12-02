@@ -11,7 +11,7 @@
 			href="doctor_profile.jsp">Profile</a> | <a href="index.html">Logout</a>
 	</center>
 	<br><br>
-	<%@page import="java.sql.*"%>
+	<%@include file="connect.jsp"%>
 	<table border="2px;" align="center" width="500" hight="300">
 		<tr>
 			<td>Id</td>
@@ -25,13 +25,6 @@
 			<td>Action</td>
 		</tr>
 		<%
-			Connection con = null;
-		PreparedStatement ps = null;
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		String url = "jdbc:mysql://localhost:3306/kims";
-		String username = "root";
-		String password = "root";
-		con = DriverManager.getConnection(url, username, password);
 		int id = (int) session.getAttribute("id");
 		String sql = "select * from doctor where did=?";
 		ps = con.prepareStatement(sql);

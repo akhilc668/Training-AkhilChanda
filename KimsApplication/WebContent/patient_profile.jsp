@@ -12,7 +12,7 @@
 	</center>
 	<br>
 	<br>
-	<%@page import="java.sql.*"%>
+	<%@include file="connect.jsp"%>
 	<table border="2px;" align="center" width="500" hight="300">
 		<tr>
 			<td>Id</td>
@@ -23,15 +23,9 @@
 			<td>Address</td>
 			<td>Action</td>
 		</tr>
+
 		<%
-			Connection con = null;
-		PreparedStatement ps = null;
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		String url = "jdbc:mysql://localhost:3306/kims";
-		String username = "root";
-		String password = "root";
-		con = DriverManager.getConnection(url, username, password);
-		int id = (int) session.getAttribute("id");
+			int id = (int) session.getAttribute("id");
 		String sql = "select * from patient where pid=?";
 		ps = con.prepareStatement(sql);
 		ps.setInt(1, id);
@@ -45,7 +39,8 @@
 			<td><%=rs.getInt("phone")%></td>
 			<td><%=rs.getString("gender")%></td>
 			<td><%=rs.getString("address")%></td>
-			<td><a href="update_patient_profile.jsp?id=<%=rs.getInt("pid")%>">update</a>
+			<td><a
+				href="update_patient_profile.jsp?id=<%=rs.getInt("pid")%>">update</a>
 		</tr>
 		<%
 			}

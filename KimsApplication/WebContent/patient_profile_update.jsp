@@ -1,12 +1,5 @@
-<%@page import="java.sql.* "%>
+<%@include file="connect.jsp" %>
 <%
-	Connection con = null;
-PreparedStatement ps = null;
-Class.forName("com.mysql.cj.jdbc.Driver");
-String url = "jdbc:mysql://localhost:3306/kims";
-String username = "root";
-String password = "root";
-con = DriverManager.getConnection(url, username, password);
 int pid = Integer.parseInt(request.getParameter("id"));
 String pname = request.getParameter("pname");
 String email = request.getParameter("email");

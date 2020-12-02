@@ -7,20 +7,13 @@
 	<br>
 	<center>
 		<h1>Welcome to Doctor Update Page</h1>
-		<br> <br> <a href="patient_home.html">Home</a> | <a
-			href="patient_profile.jsp">Profile</a> | <a href="index.html">Logout</a>
+		<br> <br> <a href="doctor_home.html">Home</a> | <a
+			href="doctor_profile.jsp">Profile</a> | <a href="index.html">Logout</a>
 	</center>
 	<br>
 	<br>
-	<%@page import="java.sql.*"%>
+	<%@ include file="connect.jsp"%>
 	<%
-		Connection con = null;
-	PreparedStatement ps = null;
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	String url = "jdbc:mysql://localhost:3306/kims";
-	String username = "root";
-	String password = "root";
-	con = DriverManager.getConnection(url, username, password);
 	int id = Integer.parseInt(request.getParameter("id"));
 	String sql = "select * from doctor where did=?";
 	ps = con.prepareStatement(sql);
