@@ -39,7 +39,7 @@
 			<td><%=rs.getInt("phone")%></td>
 			<td><%=rs.getString("gender")%></td>
 			<td><%=rs.getString("specialization")%></td>
-			<td><%=rs.getString("experiance")%></td>
+			<td><%=rs.getInt("experiance")%></td>
 			<td><%=rs.getString("address")%></td>
 			<td><a href="update_doctor_profile.jsp?id=<%=rs.getInt("did")%>">update</a></td>
 		</tr>
