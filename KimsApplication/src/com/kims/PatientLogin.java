@@ -54,6 +54,7 @@ public class PatientLogin extends HttpServlet {
 			HttpSession hs=request.getSession();
 			if(rs.next()) {
 				hs.setAttribute("id",  rs.getInt(1));
+				hs.setAttribute("email", rs.getString(4));
 				response.sendRedirect("./patient_home.html?msg=login sucessfully");
 			}
 			else
