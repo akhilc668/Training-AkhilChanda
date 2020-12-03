@@ -34,6 +34,7 @@
 </select><br><br>
 <input type="number" name="experience" value="<%=rs.getInt("experience")%>"><br><br>
 <textarea rows="15" cols="15" name="address"><%=rs.getString("address")%></textarea><br><br>
+<input type="number" name="no_of_leaves_taken" value="<%=rs.getInt("no_of_leaves_taken")%>"><br><br>
 <input type="submit" value="update">
 	<%
 		}

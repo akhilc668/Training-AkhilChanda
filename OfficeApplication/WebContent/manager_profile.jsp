@@ -22,6 +22,7 @@
 			<td>Gender</td>
 			<td>Address</td>
 			<td>Experience</td>
+			<td>Designation</td>
 			<td>Action</td>
 		</tr>
 	<%
@@ -39,6 +40,7 @@
 		<td><%=rs.getString("gender")%></td>
 		<td><%=rs.getString("address")%></td>
 		<td><%=rs.getInt("experience")%></td>
+		<td><%=rs.getString("designation") %></td>
 		<td><a href="update_manager_profile.jsp?id=<%=rs.getInt("mid")%>">update</a></td>
 	</tr>
 	<%

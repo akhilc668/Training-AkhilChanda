@@ -29,6 +29,11 @@
 <input type="radio" name="gender" value="Female">Female<br><br>
 <input type="number" name="experience" value="<%=rs.getInt("experience")%>"><br><br>
 <textarea rows="15" cols="15" name="address"><%=rs.getString("address")%></textarea><br><br>
+<select name="designation">
+<option <%=rs.getString("designation")%>><%=rs.getString("designation")%></option>
+<option vlaue="Team Manger">Team Manager </option>
+<option vlaue="Project Manger">Project Manager </option>
+</select><br><br>
 <input type="submit" value="update">
 	<%
 		}

@@ -49,6 +49,8 @@ public class ManagerLogin extends HttpServlet {
 			HttpSession hs=request.getSession();
 			if(rs.next()) {
 				hs.setAttribute("id", rs.getInt("mid"));
+				hs.setAttribute("designation", rs.getString("designation"));
+				hs.setAttribute("mname",rs.getString("mname"));
 				response.sendRedirect("./manager_home.html?msg=login sucessfully");
 			}
 			else

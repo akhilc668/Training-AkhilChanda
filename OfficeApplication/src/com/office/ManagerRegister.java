@@ -43,7 +43,8 @@ public class ManagerRegister extends HttpServlet {
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		int experience=Integer.parseInt(request.getParameter("experience"));
-		String sql="insert into manager(mname,password,email,phone,gender,address,experience) values(?,?,?,?,?,?,?)";
+		String designation=request.getParameter("designation");
+		String sql="insert into manager(mname,password,email,phone,gender,address,experience,designation) values(?,?,?,?,?,?,?,?)";
 		try {
 			ps=con.prepareStatement(sql);
 			ps.setString(1,mname);
@@ -53,6 +54,7 @@ public class ManagerRegister extends HttpServlet {
 			ps.setString(5,gender);
 			ps.setString(6,address);
 			ps.setInt(7, experience);
+			ps.setString(8, designation);
 			int x=ps.executeUpdate();
 			if(x!=0)
 				response.sendRedirect("./manager_login.html?msg=registered sucessfully");
