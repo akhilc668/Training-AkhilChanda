@@ -26,9 +26,9 @@
 			<td>Status</td>
 		</tr>
 <%
-String email=(String) session.getAttribute("email");
-ps=con.prepareStatement("select * from appointment where email=?");
-ps.setString(1,email);
+int id=(Integer)session.getAttribute("id");
+ps=con.prepareStatement("select * from appointment where pid=?");
+ps.setInt(1,id);
 ResultSet rs=ps.executeQuery();
 while(rs.next()){
 %>
