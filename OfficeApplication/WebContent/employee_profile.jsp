@@ -24,6 +24,7 @@
 			<td>Designation</td>
 			<td>Experience</td>
 			<td>No of Leaves Taken</td>
+			<td>No of remaining leaves</td>
 			<td>Action</td>
 		</tr>
 	<%
@@ -43,6 +44,7 @@
 		<td><%=rs.getString("designation")%></td>
 		<td><%=rs.getInt("experience")%></td>
 		<td><%=rs.getInt("no_of_leaves_taken") %></td>
+		<td><%=20-rs.getInt("no_of_leaves_taken") %></td>
 		<td><a href="update_employee_profile.jsp?id=<%=rs.getInt("eid")%>">update</a></td>
 	</tr>
 	<%

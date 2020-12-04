@@ -9,6 +9,7 @@
 <a href="view_leave.jsp">Leave Details</a> |
 <a href="./index.html">logout</a>
 </center>
+<br><br>
 <%@include file="connect.jsp" %>
 <table border="2px;" align="center" width="500" hight="300">
 		<tr>
@@ -52,16 +53,11 @@ while(rs.next()){
 			<%}else{ %>
 			<td><a href="accept_leave.jsp?id=<%=rs.getInt(1)%>&eid=<%=eid %>&no_of_days=<%=rs.getInt(6)%>">Accept</a></td>
 			<%}
-				}else{ 
-					if(!rs.getString(9).equalsIgnoreCase("Accepted")){ %>
-						<td>rejected</td>
-			<%}else{ %>
-				<td><a href="reject_leave.jsp?id=<%=rs.getInt(1)%>">Reject</a></td>
-			<%}
-				}%>
+				}else{ %>
+					<td><a href="reject_leave.jsp?id=<%=rs.getInt(1)%>">Reject</a></td>
+				<%} %>
 		</tr>
-		<%} %>
-<%} %>
+		<%} }%>
 </table>
 <br><br>
 </body>

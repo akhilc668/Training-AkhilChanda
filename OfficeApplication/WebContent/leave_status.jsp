@@ -10,6 +10,7 @@
 			Application</a> | <a href="leave_status.jsp">Leave status</a> | <a
 			href="./index.html">logout</a>
 	</center>
+	<br><br>
 	<%@include file="connect.jsp"%>
 	<table border="2px;" align="center" width="500" hight="300">
 		<tr>
@@ -22,11 +23,13 @@
 			<td>Desgination</td>
 			<td>Manager Name</td>
 			<td>Status</td>
+			<td>No of leave remaining</td>
 		</tr>
 		<%
-			String email = (String) session.getAttribute("email");
-		ps = con.prepareStatement("select * from leaves where email=?");
-		ps.setString(1, email);
+		int id=(Integer)session.getAttribute("id");
+		int no_of_leaves_taken=(Integer)session.getAttribute("leaves");
+		ps = con.prepareStatement("select * from leaves where eid=?");
+		ps.setInt(1,id);
 		ResultSet rs = ps.executeQuery();
 		while (rs.next()) {
 		%>
@@ -40,6 +43,7 @@
 			<td><%=rs.getString(8) %></td>
 			<td><%=rs.getString(9) %></td>
 			<td><%=rs.getString(10) %></td>
+			<td><%=20-no_of_leaves_taken %>
 		</tr>
 
 		<%

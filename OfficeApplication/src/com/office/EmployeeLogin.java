@@ -49,7 +49,7 @@ public class EmployeeLogin extends HttpServlet {
 			HttpSession hs=request.getSession();
 			if(rs.next()) {
 				hs.setAttribute("id", rs.getInt("eid"));
-				hs.setAttribute("email", email);
+				hs.setAttribute("leaves", rs.getInt(10));
 				response.sendRedirect("./employee_home.html?msg=login sucessfully");
 			}
 			else
