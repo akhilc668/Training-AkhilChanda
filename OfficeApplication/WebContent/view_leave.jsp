@@ -30,9 +30,9 @@ ps=con.prepareStatement("select * from leaves where designation=?");
 ps.setString(1,designation);
 ResultSet rs=ps.executeQuery();
 while(rs.next()){
-	String email=rs.getString(3);
-	ps=con.prepareStatement("select * from employee where email=?");
-	ps.setString(1,email);
+	int id=rs.getInt(11);
+	ps=con.prepareStatement("select * from employee where eid=?");
+	ps.setInt(1,id);
 	ResultSet rs1=ps.executeQuery();
 	if(rs1.next()){
 		int no_of_leaves_taken=rs1.getInt("no_of_leaves_taken"),eid=rs1.getInt(1);

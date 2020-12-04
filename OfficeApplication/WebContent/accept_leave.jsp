@@ -4,7 +4,6 @@ String mname=(String) session.getAttribute("mname");
 int id=Integer.parseInt(request.getParameter("id"));
 int no_of_days=Integer.parseInt(request.getParameter("no_of_days"));
 int eid=Integer.parseInt(request.getParameter("eid"));
-System.out.println(no_of_days+" "+eid);
 String sql = "update leaves set status=?,mname=? where lid=?";
 ps = con.prepareStatement(sql);
 ps.setString(1, "Accepted");
