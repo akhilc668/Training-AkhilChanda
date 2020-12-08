@@ -7,7 +7,7 @@
 <a href="./employee_home.html">Home</a> |
 <a href="./employee_profile.jsp">Profile</a> |
 <a href="leave.jsp">Leave Application</a> |
-<a href="leave.status">Leave status</a> |
+<a href="leave_status.jsp">Leave status</a> |
 <a href="./index.html">logout</a>
 </center>
 <br><br>
