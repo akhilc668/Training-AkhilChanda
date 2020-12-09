@@ -109,17 +109,15 @@ public class ViewLeaveBean {
 		return l;
 	}
 	
-	public List<Integer> details(int id) throws Exception{
+	public int details(int id) throws Exception{
 		Connection con=ConnectionEst.connecitvity();
 		PreparedStatement ps=con.prepareStatement("select * from employee where eid=?");
 		ps.setInt(1,id);
 		ResultSet rs1=ps.executeQuery();
-		List<Integer> l=new ArrayList<>();
 		if(rs1.next()){
-			l.add(rs1.getInt(1));
-			l.add(rs1.getInt("no_of_leaves_taken"));
+			return rs1.getInt("no_of_leaves_taken");
 		}
-		return l;
+		return 0;
 	}
 	
 }

@@ -30,9 +30,8 @@ List<ViewLeaveBean> l=new ViewLeaveBean().view(designation);
 Iterator i=l.iterator();
 while(i.hasNext()) {
 	ViewLeaveBean lab=(ViewLeaveBean)i.next();	
-	int id=lab.getEid();
-	List<Integer> num=new ViewLeaveBean().details(id);
-		int no_of_leaves_taken=num.get(1),eid=num.get(0);
+	int eid=lab.getEid();
+	int no_of_leaves_taken=new ViewLeaveBean().details(eid);
 %>
 <tr>
 			<td><%=lab.getEname() %></td>
