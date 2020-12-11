@@ -23,8 +23,13 @@
 <input type="text" name="ename" value="<%=rs.getString("ename")%>">
 <input type="email" name="email" value="<%=rs.getString("email")%>">
 <input type="number" name="phone" value="<%=rs.getInt("phone")%>">
-<input type="radio" name="gender" value="Male">Male
+<%if(rs.getString("gender").equals("Male")) {%>
+<input type="radio" name="gender" value="Male" checked="checked">Male
 <input type="radio" name="gender" value="Female">Female
+<%}else{ %>
+<input type="radio" name="gender" value="Male" >Male
+<input type="radio" name="gender" value="Female" checked="checked">Female
+<%} %>
 <input type="number" name="no_of_days" placeholder="Enter no of days">
 <input type="date" name="date_of_leave" placeholder="select date to leave">
 <select name="designation">
