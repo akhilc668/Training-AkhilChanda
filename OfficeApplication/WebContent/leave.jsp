@@ -11,10 +11,18 @@
 <a href="./index.html">logout</a>
 </center>
 <br><br>
-<form action="./apply_leave.jsp"  align="center">
-<input type="text" name="ename" placeholder="Enter name">
-<input type="email" name="email" placeholder="Enter email">
-<input type="number" name="phone" placeholder="Enter Phone number">
+<%@include file="connect.jsp"%>
+<%
+		int id = (int) session.getAttribute("id");
+	ps = con.prepareStatement("select * from employee where eid=?");
+	ps.setInt(1, id);
+	ResultSet rs = ps.executeQuery();
+	if (rs.next()) {
+	%>
+<form action="./apply_leave.jsp" method="post" align="center">
+<input type="text" name="ename" value="<%=rs.getString("ename")%>">
+<input type="email" name="email" value="<%=rs.getString("email")%>">
+<input type="number" name="phone" value="<%=rs.getInt("phone")%>">
 <input type="radio" name="gender" value="Male">Male
 <input type="radio" name="gender" value="Female">Female
 <input type="number" name="no_of_days" placeholder="Enter no of days">
@@ -24,6 +32,8 @@
 <option vlaue="Project Manger">Project Manager </option>
 </select>
 <input type="submit" value="apply">
+</form>
+<%} %>
 </form>
 </body>
 </html>
