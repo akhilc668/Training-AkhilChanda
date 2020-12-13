@@ -45,8 +45,7 @@ public class EmployeeRegister extends HttpServlet {
 		String address=request.getParameter("address");
 		String designation=request.getParameter("designation");
 		int experience=Integer.parseInt(request.getParameter("experience"));
-		int no_of_leaves_taken=Integer.parseInt(request.getParameter("no_of_leaves_taken"));
-		String sql="insert into employee(ename,password,email,phone,gender,address,designation,experience,no_of_leaves_taken) values(?,?,?,?,?,?,?,?,?)";
+		String sql="insert into employee(ename,password,email,phone,gender,address,designation,experience) values(?,?,?,?,?,?,?,?)";
 		try {
 			ps=con.prepareStatement(sql);
 			ps.setString(1,ename);
@@ -57,7 +56,6 @@ public class EmployeeRegister extends HttpServlet {
 			ps.setString(6,address);
 			ps.setString(7,designation);
 			ps.setInt(8, experience);
-			ps.setInt(9, no_of_leaves_taken);
 			int x=ps.executeUpdate();
 			if(x!=0)
 				response.sendRedirect("./employee_login.html?msg=registered sucessfully");
