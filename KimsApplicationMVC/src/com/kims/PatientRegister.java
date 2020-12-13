@@ -15,29 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class PatientRegister extends HttpServlet {
-	Connection con = null;
-	PreparedStatement ps = null;
-
-	public void init(ServletConfig config) {
-		// TODO Auto-generated method stub
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String url = "jdbc:mysql://localhost:3306/kims";
-		String username = "root";
-		String password = "root";
-		try {
-			con = DriverManager.getConnection(url, username, password);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String pname = request.getParameter("pname");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
