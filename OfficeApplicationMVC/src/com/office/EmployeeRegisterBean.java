@@ -75,9 +75,9 @@ public class EmployeeRegisterBean {
 		this.address = address;
 	}
 	public boolean register(String ename, String password, String email, long phone, String gender,
-			String designation, int experience, int no_of_leaves_taken, String address) throws Exception {
+			String designation, int experience, String address) throws Exception {
 		Connection con=ConnectionEst.connecitvity();		
-		String sql="insert into employee(ename,password,email,phone,gender,address,designation,experience,no_of_leaves_taken) values(?,?,?,?,?,?,?,?,?)";
+		String sql="insert into employee(ename,password,email,phone,gender,address,designation,experience) values(?,?,?,?,?,?,?,?)";
 		PreparedStatement ps=con.prepareStatement(sql);
 		ps.setString(1,ename);
 		ps.setString(2,password);
@@ -87,7 +87,6 @@ public class EmployeeRegisterBean {
 		ps.setString(6,address);
 		ps.setString(7,designation);
 		ps.setInt(8, experience);
-		ps.setInt(9, no_of_leaves_taken);
 		int x=ps.executeUpdate();
 		if(x!=0)
 			return true;

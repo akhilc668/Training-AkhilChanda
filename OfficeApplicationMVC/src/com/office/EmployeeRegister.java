@@ -24,11 +24,10 @@ public class EmployeeRegister extends HttpServlet {
 		String address=request.getParameter("address");
 		String designation=request.getParameter("designation");
 		int experience=Integer.parseInt(request.getParameter("experience"));
-		int no_of_leaves_taken=Integer.parseInt(request.getParameter("no_of_leaves_taken"));
 		
 		boolean status=false;
 		try {
-			status=new EmployeeRegisterBean().register(ename, password, email, phone, gender, designation, experience, no_of_leaves_taken, address);
+			status=new EmployeeRegisterBean().register(ename, password, email, phone, gender, designation, experience, address);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
