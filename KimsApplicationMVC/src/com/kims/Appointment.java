@@ -13,7 +13,7 @@ public class Appointment extends HttpServlet {
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String pname = request.getParameter("pname");
-		long phone = Long.parseLong(request.getParameter("phone"));
+		String phone = request.getParameter("phone");
 		String email = request.getParameter("email");
 		String gender = request.getParameter("gender");
 		String blood_group = request.getParameter("blood_group");

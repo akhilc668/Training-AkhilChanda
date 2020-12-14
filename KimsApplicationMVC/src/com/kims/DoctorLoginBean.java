@@ -35,7 +35,7 @@ public void setPassword(String password) {
 		rb.setDname(rs.getString("dname"));
 		rb.setPassword(rs.getString("password"));
 		rb.setEmail(rs.getString("email"));
-		rb.setPhone(rs.getInt("phone"));
+		rb.setPhone(rs.getString("phone"));
 		rb.setGender(rs.getString("gender"));
 		rb.setSpecialization(rs.getString("specialization"));
 		rb.setExperiance(rs.getInt("experiance"));

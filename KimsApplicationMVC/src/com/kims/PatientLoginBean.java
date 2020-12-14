@@ -35,7 +35,7 @@ public void setPassword(String password) {
 		prb.setPname(rs.getString("pname"));
 		prb.setPassword(rs.getString("password"));
 		prb.setEmail(rs.getString("email"));
-		prb.setPhone(rs.getInt("phone"));
+		prb.setPhone(rs.getString("phone"));
 		prb.setGender(rs.getString("gender"));
 		prb.setAddress(rs.getString("address"));
 		return prb;

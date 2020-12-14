@@ -9,7 +9,7 @@ public class DoctorUpdateBean {
 	private String dname;
 	private String password;
 	private String email;
-	private long phone;
+	private String phone;
 	private String gender;
 	private String specialization;
 	private int experiance;
@@ -47,11 +47,11 @@ public class DoctorUpdateBean {
 		this.email = email;
 	}
 
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -87,14 +87,14 @@ public class DoctorUpdateBean {
 		this.address = address;
 	}
 
-	public DoctorRegisterBean update(int id, String dname, String password, String email, long phone, String gender,
+	public DoctorRegisterBean update(int id, String dname, String password, String email, String phone, String gender,
 		String specialization, int experiance, String address) throws Exception {
 		Connection con = ConnectionEst.connecitvity();
 		String sql = "update doctor set dname=?,email=?,phone=?,gender=?,address=?,specialization=?,experiance=? where did=?";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, dname);
 		ps.setString(2, email);
-		ps.setLong(3, phone);
+		ps.setString(3, phone);
 		ps.setString(4, gender);
 		ps.setString(5, address);
 		ps.setString(6, specialization);
@@ -112,7 +112,7 @@ public class DoctorUpdateBean {
 				rb.setDname(rs.getString("dname"));
 				rb.setPassword(rs.getString("password"));
 				rb.setEmail(rs.getString("email"));
-				rb.setPhone(rs.getInt("phone"));
+				rb.setPhone(rs.getString("phone"));
 				rb.setGender(rs.getString("gender"));
 				rb.setSpecialization(rs.getString("specialization"));
 				rb.setExperiance(rs.getInt("experiance"));

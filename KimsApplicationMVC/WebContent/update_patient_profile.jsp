@@ -35,7 +35,7 @@
 			type="radio" name="gender" value="Female" checked="checked">Female
 		<%
 			}
-		%>
+		%><br><br>
 		<textarea rows="15" cols="15" name="address"><%=prb.getAddress()%></textarea>
 		<br> <br> <input type="submit" value="update">
 	</form>

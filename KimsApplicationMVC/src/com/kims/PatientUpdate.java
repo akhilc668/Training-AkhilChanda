@@ -23,7 +23,6 @@ public class PatientUpdate extends HttpServlet {
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
 		String phone=request.getParameter("phone");
-		long mobile=Long.parseLong(phone);
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		boolean status=false;
@@ -31,13 +30,13 @@ public class PatientUpdate extends HttpServlet {
 		pub.setId(id);
 		pub.setPname(pname);
 		pub.setEmail(email);
-		pub.setPhone(mobile);
+		pub.setPhone(phone);
 		pub.setGender(gender);
 		pub.setAddress(address);
 		HttpSession hs=request.getSession();
 		PatientRegisterBean prb=null;
 		try {
-			prb = pub.update(id, pname, password, email, mobile, gender, address);
+			prb = pub.update(id, pname, password, email, phone, gender, address);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

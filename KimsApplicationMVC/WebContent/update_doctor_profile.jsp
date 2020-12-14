@@ -36,7 +36,8 @@
 		<%
 			}
 		%>
-		<br> <select name="specialization">
+		<br><br>
+		 <select name="specialization">
 			<option value="<%=rb.getSpecialization()%>"><%=rb.getSpecialization()%></option>
 			<option value="Dentist">Dentist</option>
 			<option value="Cardio">Cardio</option>

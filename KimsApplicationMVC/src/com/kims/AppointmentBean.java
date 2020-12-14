@@ -9,7 +9,7 @@ import java.util.List;
 public class AppointmentBean {
 	private int id;
 	private String pname;
-	private long phone;
+	private String phone;
 	private String email;
 	private String gender;
 	private String blood_group;
@@ -31,10 +31,10 @@ public class AppointmentBean {
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getEmail() {
@@ -91,13 +91,13 @@ public class AppointmentBean {
 	public void setPid(int pid) {
 		this.pid = pid;
 	}
-	public boolean apply(String pname, long phone, String email, String gender, String blood_group, String specialist,
+	public boolean apply(String pname, String phone, String email, String gender, String blood_group, String specialist,
 		String date_of_appointment, String time_of_appointment, int pid) throws Exception {
 		Connection con=ConnectionEst.connecitvity();
 		String sql = "insert into appointment(pname,phone,email,gender,blood_group,specialist,date_of_appointment,time_of_appointment,pid) values(?,?,?,?,?,?,?,?,?)";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, pname);
-		ps.setLong(2, phone);
+		ps.setString(2, phone);
 		ps.setString(3, email);
 		ps.setString(4, gender);
 		ps.setString(5, blood_group);
@@ -121,7 +121,7 @@ public class AppointmentBean {
 		while(rs.next()){
 			AppointmentBean ab=new AppointmentBean();
 			ab.setPname(rs.getString(2));
-			ab.setPhone(rs.getLong(3));
+			ab.setPhone(rs.getString(3));
 			ab.setEmail(rs.getString(4));
 			ab.setGender(rs.getString(5));
 			ab.setBlood_group(rs.getString(6));

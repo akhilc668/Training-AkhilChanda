@@ -20,7 +20,6 @@ public class PatientRegister extends HttpServlet {
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
-		long mobile = Long.parseLong(phone);
 		String gender = request.getParameter("gender");
 		String address = request.getParameter("address");
 		boolean status = false;
@@ -28,11 +27,11 @@ public class PatientRegister extends HttpServlet {
 		prb.setPname(pname);
 		prb.setPassword(password);
 		prb.setEmail(email);
-		prb.setPhone(mobile);
+		prb.setPhone(phone);
 		prb.setGender(gender);
 		prb.setAddress(address);
 		try {
-			status = prb.register(pname, password, email, mobile, gender, address);
+			status = prb.register(pname, password, email, phone, gender, address);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

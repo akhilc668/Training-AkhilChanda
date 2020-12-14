@@ -8,7 +8,7 @@ public class PatientRegisterBean {
 	private String pname;
 	private String password;
 	private String email;
-	private long phone;
+	private String phone;
 	private String gender;
 	private String address;
 	 
@@ -36,10 +36,10 @@ public class PatientRegisterBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getGender() {
@@ -55,14 +55,14 @@ public class PatientRegisterBean {
 		this.address = address;
 	}
 	
-	public boolean register(String pname, String password, String email, long phone, String gender, String address) throws Exception {
+	public boolean register(String pname, String password, String email, String phone, String gender, String address) throws Exception {
 		Connection con=ConnectionEst.connecitvity();
 		String sql="insert into patient(pname,password,email,phone,gender,address) values(?,?,?,?,?,?)";
 		PreparedStatement ps=con.prepareStatement(sql);
 		ps.setString(1, pname);
 		ps.setString(2, password);
 		ps.setString(3, email);
-		ps.setLong(4, phone);
+		ps.setString(4, phone);
 		ps.setString(5,gender);
 		ps.setString(6, address);
 		int a=ps.executeUpdate();

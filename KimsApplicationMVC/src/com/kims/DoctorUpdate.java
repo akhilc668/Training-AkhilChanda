@@ -23,7 +23,6 @@ public class DoctorUpdate extends HttpServlet {
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
 		String phone=request.getParameter("phone");
-		long mobile=Long.parseLong(phone);
 		String gender=request.getParameter("gender");
 		String specialization=request.getParameter("specialization");
 		int experiance=Integer.parseInt(request.getParameter("experiance"));
@@ -33,7 +32,7 @@ public class DoctorUpdate extends HttpServlet {
 		ub.setId(id);
 		ub.setDname(dname);
 		ub.setEmail(email);
-		ub.setPhone(mobile);
+		ub.setPhone(phone);
 		ub.setGender(gender);
 		ub.setSpecialization(specialization);
 		ub.setExperiance(experiance);
@@ -41,7 +40,7 @@ public class DoctorUpdate extends HttpServlet {
 		HttpSession hs=request.getSession();
 		DoctorRegisterBean rb=null;
 		try {
-			rb = ub.update(id, dname, password, email, mobile, gender, specialization, experiance, address);
+			rb = ub.update(id, dname, password, email, phone, gender, specialization, experiance, address);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

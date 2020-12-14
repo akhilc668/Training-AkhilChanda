@@ -21,7 +21,6 @@ public class DoctorRegister extends HttpServlet {
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
 		String phone=request.getParameter("phone");
-		long mobile=Long.parseLong(phone);
 		String gender=request.getParameter("gender");
 		String specialization=request.getParameter("specialization");
 		int experiance=Integer.parseInt(request.getParameter("experiance"));
@@ -31,13 +30,13 @@ public class DoctorRegister extends HttpServlet {
 		rb.setDname(dname);
 		rb.setPassword(password);
 		rb.setEmail(email);
-		rb.setPhone(mobile);
+		rb.setPhone(phone);
 		rb.setGender(gender);
 		rb.setSpecialization(specialization);
 		rb.setExperiance(experiance);
 		rb.setAddress(address);
 		try {
-			status=rb.register(dname, password, email, mobile, gender, specialization, experiance, address);
+			status=rb.register(dname, password, email, phone, gender, specialization, experiance, address);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
