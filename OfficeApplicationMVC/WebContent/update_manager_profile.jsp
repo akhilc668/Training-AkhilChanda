@@ -22,8 +22,13 @@
 <input type="text" name="mname" value="<%=mrb.getMname()%>"><br><br>
 <input type="email" name="email" value="<%=mrb.getEmail()%>"><br><br>
 <input type="number" name="phone" value="<%=mrb.getPhone()%>"><br><br>
-<input type="radio" name="gender" value="Male">Male
-<input type="radio" name="gender" value="Female">Female<br><br>
+<%if(mrb.getGender().equals("Male")) {%>
+<input type="radio" name="gender" value="Male" checked="checked">Male
+<input type="radio" name="gender" value="Female">Female
+<%}else{ %>
+<input type="radio" name="gender" value="Male" >Male
+<input type="radio" name="gender" value="Female" checked="checked">Female
+<%} %>
 <input type="number" name="experience" value="<%=mrb.getExperience()%>"><br><br>
 <textarea rows="15" cols="15" name="address"><%=mrb.getAddress()%></textarea><br><br>
 <select name="designation">

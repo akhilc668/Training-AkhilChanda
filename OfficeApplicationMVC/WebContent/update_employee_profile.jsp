@@ -22,8 +22,13 @@
 <input type="text" name="ename" value="<%=erb.getEname()%>"><br><br>
 <input type="email" name="email" value="<%=erb.getEmail()%>"><br><br>
 <input type="number" name="phone" value="<%=erb.getPhone()%>"><br><br>
-<input type="radio" name="gender" value="Male">Male
-<input type="radio" name="gender" value="Female">Female<br><br>
+<%if(erb.getGender().equals("Male")) {%>
+<input type="radio" name="gender" value="Male" checked="checked">Male
+<input type="radio" name="gender" value="Female">Female
+<%}else{ %>
+<input type="radio" name="gender" value="Male" >Male
+<input type="radio" name="gender" value="Female" checked="checked">Female
+<%} %>
 <select name="designation">
 <option value="<%=erb.getDesignation()%>"><%=erb.getDesignation()%></option>
 <option value="Developer">Developer</option>
