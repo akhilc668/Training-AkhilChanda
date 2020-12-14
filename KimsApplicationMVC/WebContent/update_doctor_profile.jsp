@@ -12,27 +12,37 @@
 	</center>
 	<br>
 	<br>
-	<%@page import="com.kims.DoctorRegisterBean" %>
+	<%@page import="com.kims.DoctorRegisterBean"%>
 	<%
-		DoctorRegisterBean rb=(DoctorRegisterBean)session.getAttribute("doctorDetails");
-		if (rb!=null) {
+		DoctorRegisterBean rb = (DoctorRegisterBean) session.getAttribute("doctorDetails");
+	if (rb != null) {
 	%>
 	<form action="./doctor_update" method="post" align="center">
-		<input type="hidden" name="id" value="<%=rb.getId()%>">
-		<input type="text" name="dname" value="<%=rb.getDname()%>"><br>
-		<br> <input type="email" name="email"
-			value="<%=rb.getEmail()%>"><br> <br> <input
-			type="number" name="phone" value="<%=rb.getPhone()%>"><br>
-		<br> <input type="radio" name="gender" value="Male">Male
-		<input type="radio" name="gender" value="Female">Female<br>
+		<input type="hidden" name="id" value="<%=rb.getId()%>"> <input
+			type="text" name="dname" value="<%=rb.getDname()%>"><br>
+		<br> <input type="email" name="email" value="<%=rb.getEmail()%>"><br>
+		<br> <input type="number" name="phone" value="<%=rb.getPhone()%>"><br>
+		<br>
+		<%
+			if (rb.getGender().equals("Male")) {
+		%>
+		<input type="radio" name="gender" value="Male" checked="checked">Male
+		<input type="radio" name="gender" value="Female">Female
+		<%
+			} else {
+		%>
+		<input type="radio" name="gender" value="Male">Male <input
+			type="radio" name="gender" value="Female" checked="checked">Female
+		<%
+			}
+		%>
 		<br> <select name="specialization">
-		 	<option value="<%=rb.getSpecialization()%>"><%=rb.getSpecialization()%></option>
+			<option value="<%=rb.getSpecialization()%>"><%=rb.getSpecialization()%></option>
 			<option value="Dentist">Dentist</option>
 			<option value="Cardio">Cardio</option>
 			<option value="ENT">ENT</option>
-		</select><br>
-		<br> <input type="number" name="experiance" value="<%=rb.getExperiance()%>"><br>
-		<br>
+		</select><br> <br> <input type="number" name="experiance"
+			value="<%=rb.getExperiance()%>"><br> <br>
 		<textarea rows="15" cols="15" name="address"><%=rb.getAddress()%></textarea>
 		<br> <br> <input type="submit" value="update">
 	</form>
