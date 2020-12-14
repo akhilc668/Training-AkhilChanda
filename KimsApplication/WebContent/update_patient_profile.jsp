@@ -27,9 +27,20 @@
 		<br> <input type="email" name="email"
 			value="<%=rs.getString("email")%>"><br> <br> <input
 			type="number" name="phone" value="<%=rs.getLong("phone")%>"><br>
-		<br> <input type="radio" name="gender" value="Male">Male
-		<input type="radio" name="gender" value="Female">Female<br>
 		<br>
+		<%
+			if (rs.getString("gender").equals("Male")) {
+		%>
+		<input type="radio" name="gender" value="Male" checked="checked">Male
+		<input type="radio" name="gender" value="Female">Female
+		<%
+			} else {
+		%>
+		<input type="radio" name="gender" value="Male">Male <input
+			type="radio" name="gender" value="Female" checked="checked">Female
+		<%
+			}
+		%><br> <br>
 		<textarea rows="15" cols="15" name="address"><%=rs.getString("address")%></textarea>
 		<br> <br> <input type="submit" value="update">
 	</form>

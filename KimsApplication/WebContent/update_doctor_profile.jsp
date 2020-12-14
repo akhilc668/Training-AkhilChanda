@@ -14,7 +14,7 @@
 	<br>
 	<%@ include file="connect.jsp"%>
 	<%
-	int id = Integer.parseInt(request.getParameter("id"));
+		int id = Integer.parseInt(request.getParameter("id"));
 	String sql = "select * from doctor where did=?";
 	ps = con.prepareStatement(sql);
 	ps.setInt(1, id);
@@ -27,16 +27,26 @@
 		<br> <input type="email" name="email"
 			value="<%=rs.getString("email")%>"><br> <br> <input
 			type="number" name="phone" value="<%=rs.getLong("phone")%>"><br>
-		<br> <input type="radio" name="gender" value="Male">Male
-		<input type="radio" name="gender" value="Female">Female<br>
-		<br> <select name="specialization">
-		 	<option value="<%=rs.getString("specialization")%>"><%=rs.getString("specialization")%></option>
+		<br>
+		<%
+			if (rs.getString("gender").equals("Male")) {
+		%>
+		<input type="radio" name="gender" value="Male" checked="checked">Male
+		<input type="radio" name="gender" value="Female">Female
+		<%
+			} else {
+		%>
+		<input type="radio" name="gender" value="Male">Male <input
+			type="radio" name="gender" value="Female" checked="checked">Female
+		<%
+			}
+		%><br> <br> <select name="specialization">
+			<option value="<%=rs.getString("specialization")%>"><%=rs.getString("specialization")%></option>
 			<option value="Dentist">Dentist</option>
 			<option value="Cardio">Cardio</option>
 			<option value="ENT">ENT</option>
-		</select><br>
-		<br> <input type="number" name="experiance" value="<%=rs.getInt("experiance")%>"><br>
-		<br>
+		</select><br> <br> <input type="number" name="experiance"
+			value="<%=rs.getInt("experiance")%>"><br> <br>
 		<textarea rows="15" cols="15" name="address"><%=rs.getString("address")%></textarea>
 		<br> <br> <input type="submit" value="update">
 	</form>
