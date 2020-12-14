@@ -8,7 +8,7 @@ public class ManagerRegisterBean {
 	private String mname;
 	private String password;
 	private String email;
-	private long phone;
+	private String phone;
 	private String gender;
 	private String address;
 	private int experience;
@@ -37,10 +37,10 @@ public class ManagerRegisterBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getGender() {
@@ -67,7 +67,7 @@ public class ManagerRegisterBean {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
-	public boolean register(String mname, String password, String email, long phone, String gender, String address,
+	public boolean register(String mname, String password, String email, String phone, String gender, String address,
 			int experience, String designation) throws Exception {
 		Connection con=ConnectionEst.connecitvity();
 		String sql="insert into manager(mname,password,email,phone,gender,address,experience,designation) values(?,?,?,?,?,?,?,?)";
@@ -75,7 +75,7 @@ public class ManagerRegisterBean {
 		ps.setString(1,mname);
 		ps.setString(2,password);
 		ps.setString(3,email);
-		ps.setLong(4, phone);
+		ps.setString(4, phone);
 		ps.setString(5,gender);
 		ps.setString(6,address);
 		ps.setInt(7, experience);

@@ -9,7 +9,7 @@ public class EmployeeUpdateBean {
 	private String ename;
 	private String password;
 	private String email;
-	private long phone;
+	private String phone;
 	private String gender;
 	private String designation;
 	private int experience;
@@ -39,10 +39,10 @@ public class EmployeeUpdateBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getGender() {
@@ -75,14 +75,14 @@ public class EmployeeUpdateBean {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public EmployeeRegisterBean update(int id,String ename, String email, long phone, String gender,
+	public EmployeeRegisterBean update(int id,String ename, String email, String phone, String gender,
 			String designation, int experience, int no_of_leaves_taken, String address) throws Exception {
 		Connection con=ConnectionEst.connecitvity();		
 		String sql="update employee set ename=?,email=?,phone=?,gender=?,address=?,designation=?,experience=?,no_of_leaves_taken=? where eid=?";
 		PreparedStatement ps=con.prepareStatement(sql);
 		ps.setString(1,ename);
 		ps.setString(2,email);
-		ps.setLong(3, phone);
+		ps.setString(3, phone);
 		ps.setString(4,gender);
 		ps.setString(5,address);
 		ps.setString(6,designation);

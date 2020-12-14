@@ -19,7 +19,7 @@ public class ManagerRegister extends HttpServlet {
 		String mname=request.getParameter("mname");
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
-		long phone=Long.parseLong(request.getParameter("phone"));
+		String phone=request.getParameter("phone");
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		int experience=Integer.parseInt(request.getParameter("experience"));

@@ -10,7 +10,7 @@ public class LeaveApplyBean {
 	private int lid;
 	private String ename;
 	private String email;
-	private long phone;
+	private String phone;
 	private String gender;
 	private int no_of_days;
 	private String date_of_leave;
@@ -36,10 +36,10 @@ public class LeaveApplyBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getGender() {
@@ -84,14 +84,14 @@ public class LeaveApplyBean {
 	public void setEid(int eid) {
 		this.eid = eid;
 	}
-	public boolean leave(String ename, String email, long phone, String gender, int no_of_days,
+	public boolean leave(String ename, String email, String phone, String gender, int no_of_days,
 			String date_of_leave, String designation, int eid) throws Exception {
 		Connection con=ConnectionEst.connecitvity();
 		String sql="insert into leaves(ename,email,phone,gender,no_of_days,date_of_leave,designation,eid) values(?,?,?,?,?,?,?,?)";
 		PreparedStatement ps=con.prepareStatement(sql);
 		ps.setString(1, ename);
 		ps.setString(2, email);
-		ps.setLong(3,phone);
+		ps.setString(3,phone);
 		ps.setString(4,gender);
 		ps.setInt(5,no_of_days);
 		ps.setString(6, date_of_leave);
@@ -115,7 +115,7 @@ public class LeaveApplyBean {
 			lab.setLid(rs.getInt(1));
 			lab.setEname(rs.getString(2));
 			lab.setEmail(rs.getString(3));
-			lab.setPhone(rs.getLong(4));
+			lab.setPhone(rs.getString(4));
 			lab.setGender(rs.getString(5));
 			lab.setNo_of_days(rs.getInt(6));
 			lab.setDate_of_leave(rs.getString(7));

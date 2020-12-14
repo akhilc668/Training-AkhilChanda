@@ -32,7 +32,7 @@ public class EmployeeLoginBean {
 			erb.setEname(rs.getString(2));
 			erb.setPassword(rs.getString(3));
 			erb.setEmail(rs.getString(4));
-			erb.setPhone(rs.getLong(5));
+			erb.setPhone(rs.getString(5));
 			erb.setGender(rs.getString(6));
 			erb.setAddress(rs.getString(7));
 			erb.setDesignation(rs.getString(8));

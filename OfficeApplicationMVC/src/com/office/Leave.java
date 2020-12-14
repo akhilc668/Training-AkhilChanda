@@ -13,8 +13,7 @@ public class Leave extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ename=request.getParameter("ename");
 		String email=request.getParameter("email");
-		String number=request.getParameter("phone");
-		long phone=Long.parseLong(number);
+		String phone=request.getParameter("phone");
 		String gender=request.getParameter("gender");
 		int no_of_days=Integer.parseInt(request.getParameter("no_of_days"));
 		String date_of_leave=request.getParameter("date_of_leave");

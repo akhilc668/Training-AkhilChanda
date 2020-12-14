@@ -28,7 +28,7 @@
 <%}else{ %>
 <input type="radio" name="gender" value="Male" >Male
 <input type="radio" name="gender" value="Female" checked="checked">Female
-<%} %>
+<%} %><br><br>
 <select name="designation">
 <option value="<%=erb.getDesignation()%>"><%=erb.getDesignation()%></option>
 <option value="Developer">Developer</option>

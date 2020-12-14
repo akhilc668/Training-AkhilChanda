@@ -19,8 +19,7 @@ public class EmployeeUpdate extends HttpServlet {
 		int id=Integer.parseInt(request.getParameter("id"));
 		String ename=request.getParameter("ename");
 		String email=request.getParameter("email");
-		String number=request.getParameter("phone");
-		long phone=Long.parseLong(number);
+		String phone=request.getParameter("phone");
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		String designation=request.getParameter("designation");

@@ -28,7 +28,7 @@
 <%}else{ %>
 <input type="radio" name="gender" value="Male" >Male
 <input type="radio" name="gender" value="Female" checked="checked">Female
-<%} %>
+<%} %><br><br>
 <input type="number" name="experience" value="<%=mrb.getExperience()%>"><br><br>
 <textarea rows="15" cols="15" name="address"><%=mrb.getAddress()%></textarea><br><br>
 <select name="designation">

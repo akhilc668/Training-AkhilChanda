@@ -8,7 +8,7 @@ public class EmployeeRegisterBean {
 	private String ename;
 	private String password;
 	private String email;
-	private long phone;
+	private String phone;
 	private String gender;
 	private String designation;
 	private int experience;
@@ -38,10 +38,10 @@ public class EmployeeRegisterBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getGender() {
@@ -74,7 +74,7 @@ public class EmployeeRegisterBean {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public boolean register(String ename, String password, String email, long phone, String gender,
+	public boolean register(String ename, String password, String email, String phone, String gender,
 			String designation, int experience, String address) throws Exception {
 		Connection con=ConnectionEst.connecitvity();		
 		String sql="insert into employee(ename,password,email,phone,gender,address,designation,experience) values(?,?,?,?,?,?,?,?)";
@@ -82,7 +82,7 @@ public class EmployeeRegisterBean {
 		ps.setString(1,ename);
 		ps.setString(2,password);
 		ps.setString(3,email);
-		ps.setLong(4, phone);
+		ps.setString(4, phone);
 		ps.setString(5,gender);
 		ps.setString(6,address);
 		ps.setString(7,designation);

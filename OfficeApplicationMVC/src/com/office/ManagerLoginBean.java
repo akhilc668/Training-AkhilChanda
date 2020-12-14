@@ -32,7 +32,7 @@ public class ManagerLoginBean {
 			mrb.setMname(rs.getString(2));
 			mrb.setPassword(rs.getString(3));
 			mrb.setEmail(rs.getString(4));
-			mrb.setPhone(rs.getLong(5));
+			mrb.setPhone(rs.getString(5));
 			mrb.setGender(rs.getString(6));
 			mrb.setAddress(rs.getString(7));
 			mrb.setExperience(rs.getInt(8));

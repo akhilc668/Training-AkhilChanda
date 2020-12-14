@@ -18,8 +18,7 @@ public class EmployeeRegister extends HttpServlet {
 		String ename=request.getParameter("ename");
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
-		String number=request.getParameter("phone");
-		long phone=Long.parseLong(number);
+		String phone=request.getParameter("phone");
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		String designation=request.getParameter("designation");
