@@ -42,7 +42,6 @@ public class DoctorRegister extends HttpServlet {
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
 		String phone=request.getParameter("phone");
-		long mobile=Long.parseLong(phone);
 		String gender=request.getParameter("gender");
 		String specialization=request.getParameter("specialization");
 		int experiance=Integer.parseInt(request.getParameter("experiance"));
@@ -54,7 +53,7 @@ public class DoctorRegister extends HttpServlet {
 			ps.setString(1, dname);
 			ps.setString(2, password);
 			ps.setString(3, email);
-			ps.setLong(4, mobile);
+			ps.setString(4, phone);
 			ps.setString(5,gender);
 			ps.setString(6, specialization);
 			ps.setInt(7, experiance);

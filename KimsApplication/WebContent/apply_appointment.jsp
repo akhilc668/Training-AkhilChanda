@@ -1,7 +1,7 @@
 <%@include file="connect.jsp"%>
 <%
 	String pname = request.getParameter("pname");
-long phone = Long.parseLong(request.getParameter("phone"));
+String phone = request.getParameter("phone");
 String email = request.getParameter("email");
 String gender = request.getParameter("gender");
 String blood_group = request.getParameter("blood_group");
@@ -12,7 +12,7 @@ int id=(Integer)session.getAttribute("id");
 String sql = "insert into appointment(pname,phone,email,gender,blood_group,specialist,date_of_appointment,time_of_appointment,pid) values(?,?,?,?,?,?,?,?,?)";
 ps = con.prepareStatement(sql);
 ps.setString(1, pname);
-ps.setLong(2, phone);
+ps.setString(2, phone);
 ps.setString(3, email);
 ps.setString(4, gender);
 ps.setString(5, blood_group);

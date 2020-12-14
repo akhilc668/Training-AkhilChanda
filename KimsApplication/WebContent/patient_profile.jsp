@@ -36,7 +36,7 @@
 			<td><%=rs.getInt("pid")%></td>
 			<td><%=rs.getString("pname")%></td>
 			<td><%=rs.getString("email")%></td>
-			<td><%=rs.getInt("phone")%></td>
+			<td><%=rs.getString("phone")%></td>
 			<td><%=rs.getString("gender")%></td>
 			<td><%=rs.getString("address")%></td>
 			<td><a

@@ -36,7 +36,7 @@
 			<td><%=rs.getInt("did")%></td>
 			<td><%=rs.getString("dname")%></td>
 			<td><%=rs.getString("email")%></td>
-			<td><%=rs.getInt("phone")%></td>
+			<td><%=rs.getString("phone")%></td>
 			<td><%=rs.getString("gender")%></td>
 			<td><%=rs.getString("specialization")%></td>
 			<td><%=rs.getInt("experiance")%></td>

@@ -42,7 +42,6 @@ public class PatientRegister extends HttpServlet {
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
 		String phone=request.getParameter("phone");
-		long mobile=Long.parseLong(phone);
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		PrintWriter pw=response.getWriter();
@@ -52,7 +51,7 @@ public class PatientRegister extends HttpServlet {
 			ps.setString(1, pname);
 			ps.setString(2, password);
 			ps.setString(3, email);
-			ps.setLong(4, mobile);
+			ps.setString(4, phone);
 			ps.setString(5,gender);
 			ps.setString(6, address);
 			int a=ps.executeUpdate();

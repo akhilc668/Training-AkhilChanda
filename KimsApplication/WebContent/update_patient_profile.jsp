@@ -26,7 +26,7 @@
 		<input type="text" name="pname" value="<%=rs.getString("pname")%>"><br>
 		<br> <input type="email" name="email"
 			value="<%=rs.getString("email")%>"><br> <br> <input
-			type="number" name="phone" value="<%=rs.getLong("phone")%>"><br>
+			type="number" name="phone" value="<%=rs.getString("phone")%>"><br>
 		<br>
 		<%
 			if (rs.getString("gender").equals("Male")) {
