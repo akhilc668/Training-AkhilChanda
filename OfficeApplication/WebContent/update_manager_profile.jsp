@@ -24,7 +24,7 @@
 	<input type="hidden" name="id" value="<%=rs.getInt("mid")%>">
 <input type="text" name="mname" value="<%=rs.getString("mname")%>"><br><br>
 <input type="email" name="email" value="<%=rs.getString("email")%>"><br><br>
-<input type="number" name="phone" value="<%=rs.getInt("phone")%>"><br><br>
+<input type="number" name="phone" value="<%=rs.getString("phone")%>"><br><br>
 <%if(rs.getString("gender").equals("Male")) {%>
 <input type="radio" name="gender" value="Male" checked="checked">Male
 <input type="radio" name="gender" value="Female">Female

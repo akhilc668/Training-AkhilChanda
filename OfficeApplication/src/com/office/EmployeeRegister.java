@@ -39,8 +39,7 @@ public class EmployeeRegister extends HttpServlet {
 		String ename=request.getParameter("ename");
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
-		String number=request.getParameter("phone");
-		long phone=Long.parseLong(number);
+		String phone=request.getParameter("phone");
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		String designation=request.getParameter("designation");
@@ -51,7 +50,7 @@ public class EmployeeRegister extends HttpServlet {
 			ps.setString(1,ename);
 			ps.setString(2,password);
 			ps.setString(3,email);
-			ps.setLong(4, phone);
+			ps.setString(4, phone);
 			ps.setString(5,gender);
 			ps.setString(6,address);
 			ps.setString(7,designation);

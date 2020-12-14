@@ -22,7 +22,7 @@
 <form action="./apply_leave.jsp" method="post" align="center">
 <input type="text" name="ename" value="<%=rs.getString("ename")%>">
 <input type="email" name="email" value="<%=rs.getString("email")%>">
-<input type="number" name="phone" value="<%=rs.getInt("phone")%>">
+<input type="number" name="phone" value="<%=rs.getString("phone")%>">
 <%if(rs.getString("gender").equals("Male")) {%>
 <input type="radio" name="gender" value="Male" checked="checked">Male
 <input type="radio" name="gender" value="Female">Female

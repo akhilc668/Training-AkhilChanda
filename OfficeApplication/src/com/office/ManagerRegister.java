@@ -39,7 +39,7 @@ public class ManagerRegister extends HttpServlet {
 		String mname=request.getParameter("mname");
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
-		long phone=Long.parseLong(request.getParameter("phone"));
+		String phone=request.getParameter("phone");
 		String gender=request.getParameter("gender");
 		String address=request.getParameter("address");
 		int experience=Integer.parseInt(request.getParameter("experience"));
@@ -50,7 +50,7 @@ public class ManagerRegister extends HttpServlet {
 			ps.setString(1,mname);
 			ps.setString(2,password);
 			ps.setString(3,email);
-			ps.setLong(4, phone);
+			ps.setString(4, phone);
 			ps.setString(5,gender);
 			ps.setString(6,address);
 			ps.setInt(7, experience);

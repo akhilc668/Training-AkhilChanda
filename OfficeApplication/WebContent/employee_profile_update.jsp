@@ -3,8 +3,7 @@
 int id=Integer.parseInt(request.getParameter("id"));
 String ename=request.getParameter("ename");
 String email=request.getParameter("email");
-String number=request.getParameter("phone");
-long phone=Long.parseLong(number);
+String phone=request.getParameter("phone");
 String gender=request.getParameter("gender");
 String address=request.getParameter("address");
 String designation=request.getParameter("designation");
@@ -14,7 +13,7 @@ String sql="update employee set ename=?,email=?,phone=?,gender=?,address=?,desig
 ps=con.prepareStatement(sql);
 ps.setString(1,ename);
 ps.setString(2,email);
-ps.setLong(3, phone);
+ps.setString(3, phone);
 ps.setString(4,gender);
 ps.setString(5,address);
 ps.setString(6,designation);

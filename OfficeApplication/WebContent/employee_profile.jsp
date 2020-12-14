@@ -38,7 +38,7 @@
 		<td><%=rs.getInt("eid")%></td>
 		<td><%=rs.getString("ename")%></td>
 		<td><%=rs.getString("email")%></td>
-		<td><%=rs.getInt("phone")%></td>
+		<td><%=rs.getString("phone")%></td>
 		<td><%=rs.getString("gender")%></td>
 		<td><%=rs.getString("address")%></td>
 		<td><%=rs.getString("designation")%></td>
