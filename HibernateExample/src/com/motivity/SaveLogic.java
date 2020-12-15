@@ -20,7 +20,7 @@ public class SaveLogic {
 		s.setMarks(555);
 		s.setSection("B");
 		Transaction tx=se.beginTransaction();
-		Serializable ser= se.save(s);//it's return type is id
+		Serializable ser= se.save(s);//it's return type is Serializable
 		tx.commit();
 		System.out.println(ser.toString());
 		se.close();
