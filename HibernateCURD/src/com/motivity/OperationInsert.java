@@ -32,9 +32,9 @@ public class OperationInsert {
 			    e.setPhone(sc.next());
 			    System.out.println("enter the date of Join :");
 			    e.setDOJ( sc.next());
-			    Serializable s=se.save(e);
+			    Object s=se.save(e);
 			tx.commit();
-			if(s.hashCode()>0) {
+			if(s!=null) {
 				System.out.println("Record inserted");
 			}
 			System.out.println("Do you want to continue (y/n): ");
