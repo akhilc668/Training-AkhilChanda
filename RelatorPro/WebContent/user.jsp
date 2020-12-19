@@ -5,10 +5,9 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
-<a href="admin_home.jsp">Home</a> |
-<a href="employee_register.jsp">Employee Register</a> |
-<a href="add_plot.jsp">Add plot</a> |
-<a href="./index.html">Logout</a>
+<a href="user.jsp">Home</a> |
+<a href="user_register.jsp">User Register</a> |
+<a href="user_login.jsp">User Login</a> 
 </center>
 <br><br><br>
 </body>

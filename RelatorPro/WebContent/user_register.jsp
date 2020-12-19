@@ -5,14 +5,13 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
-<a href="admin_home.jsp">Home</a> |
-<a href="employee_register.jsp">Employee Register</a> |
-<a href="add_plot.jsp">Add plot</a> |
-<a href="./index.html">Logout</a>
+<a href="user.jsp">Home</a> |
+<a href="user_register.jsp">User Register</a> |
+<a href="user_login.jsp">User Login</a> 
 </center>
 <br><br><br>
-<form action="./employee_register" method="post" align="center">
-Name: <input type="text" name="ename"><br><br>
+<form action="./user_register" method="post" align="center">
+Name: <input type="text" name="uname"><br><br>
 Email: <input type="email" name="email"><br><br>
 Password: <input type="password" name="password"><br><br>
 phone: <input type="number" name="phone"><br><br>
