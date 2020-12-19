@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.pojo.Sales" table="sales">
+<id name="id" column="id"></id>
+<property name="plotId" column="plotId"></property>
+<property name="ownerName" column="ownerName"></property>
+<property name="buyerName" column="buyerName"></property>
+<property name="bPhone" column="bPhone"></property>
+<property name="paymentType" column="paymentType"></property>
+<property name="paidAmount" column="paidAmount"></property>
+<property name="paymentStatus" column="paymentStatus"></property>
+</class>
+</hibernate-mapping>
