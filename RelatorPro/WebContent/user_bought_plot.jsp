@@ -44,7 +44,11 @@ Plot p=ViewPlotBean.getById(vab.getPlotId());
 			<td><%=p.getVenture() %></td>
 			<td><%=p.getAmount() %></td>
 			<td><%=p.getAddress() %></td>
+			<%if(p.getStatus().equals("reserved")||p.getStatus().equals("vacant")){ %>
 			<td><%=p.getStatus() %></td>
+			<%}else{ %>
+			<td>Owned</td>
+			<%} %>
 			<td><%=vab.getPaidAmount()%></td>
 			<td><%=vab.getRemainingAmount() %></td>
 			<td><%=vab.getPaymentStatus() %></td>
