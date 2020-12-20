@@ -11,5 +11,11 @@
 <a href="index.html">Logout</a> 
 </center>
 <br><br><br>
+<%int id=Integer.parseInt(request.getParameter("id")); %>
+<form action="./complete_payment" method="post" align="center"> 
+<input type="hidden" name="id" value="<%=id%>">
+Amount: <input type="number" name="paidAmount">
+<input type="submit" value="pay">
+</form>
 </body>
 </html>

@@ -2,30 +2,30 @@ package com.realtor;
 
 import java.util.List;
 
-import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import com.pojo.Plot;
+import com.pojo.Sales;
 
-public class ViewPlotBean {
-	public static List<Plot> view(){
+public class ViewSalesBean {
+	public static List<Sales> viewSales(){
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
-		Query qe=se.createQuery("from Plot p");
-		List<Plot> li=qe.list();
+		Query qe=se.createQuery("from Sales s");
+		List<Sales> li=qe.list();
 		tx.commit();
 		if(!li.isEmpty()) {
 			return li;
 		}
 		return null;
-		
 	}
 	
-	public static Plot getById(int id) {
+	public static Sales getById(int id) {
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
-		Plot p=(Plot) se.load("com.pojo.Plot", id);
+		Sales p=(Sales) se.load("com.pojo.Sales", id);
 		tx.commit();
 		if(p!=null) {
 			return p;
@@ -33,14 +33,14 @@ public class ViewPlotBean {
 		return null;
 	}
 	
-	public static List<Plot> viewByStatus(String status){
+	public static List<Sales> viewSalesByUser(int uid){
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
-		Query qe=se.createQuery("from Plot p where p.status=:x");
-		qe.setParameter("x", status);
-		List<Plot> li=qe.list();
+		Query qe=se.createQuery("from Sales s where s.uid=:x");
+		qe.setParameter("x", uid);
+		List<Sales> li=qe.list();
 		tx.commit();
-		if(li!=null) {
+		if(!li.isEmpty()) {
 			return li;
 		}
 		return null;

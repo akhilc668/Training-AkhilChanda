@@ -18,6 +18,7 @@ public class UserLogin extends HttpServlet {
 		u=UserLoginBean.login(email, password);
 		HttpSession hs=request.getSession();
 		if(u!=null) {
+			hs.setAttribute("user", u);
 			hs.setAttribute("uid", u.getId());
 			response.sendRedirect("./user_home.jsp?msg=login sucessfully");
 		}

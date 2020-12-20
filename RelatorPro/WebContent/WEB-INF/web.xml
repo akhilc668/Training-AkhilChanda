@@ -56,4 +56,28 @@
 		<servlet-name>up</servlet-name>
 		<url-pattern>/update_plot</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>bp</servlet-name>
+		<servlet-class>com.realtor.BuyPlot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bp</servlet-name>
+		<url-pattern>/buy_plot</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>sb</servlet-name>
+		<servlet-class>com.realtor.SalesBook</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sb</servlet-name>
+		<url-pattern>/sales_book</url-pattern>
+	</servlet-mapping>
+	 <servlet>
+		<servlet-name>cp</servlet-name>
+		<servlet-class>com.realtor.CompletePayment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cp</servlet-name>
+		<url-pattern>/complete_payment</url-pattern>
+	</servlet-mapping>
 </web-app>
