@@ -75,4 +75,12 @@
 		<servlet-name>ninth</servlet-name>
 		<url-pattern>/sales_book</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>tenth</servlet-name>
+		<servlet-class>com.realtor.CompletePayment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tenth</servlet-name>
+		<url-pattern>/complete_payment</url-pattern>
+	</servlet-mapping>
 </web-app>
