@@ -1,83 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
 	<servlet>
-		<servlet-name>al</servlet-name>
+		<servlet-name>first</servlet-name>
 		<servlet-class>com.realtor.AdminLogin</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>al</servlet-name>
+		<servlet-name>first</servlet-name>
 		<url-pattern>/admin_login</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>er</servlet-name>
+		<servlet-name>second</servlet-name>
 		<servlet-class>com.realtor.EmployeeRegister</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>er</servlet-name>
+		<servlet-name>second</servlet-name>
 		<url-pattern>/employee_register</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>el</servlet-name>
+		<servlet-name>third</servlet-name>
 		<servlet-class>com.realtor.EmployeeLogin</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>el</servlet-name>
+		<servlet-name>third</servlet-name>
 		<url-pattern>/employee_login</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>ur</servlet-name>
+		<servlet-name>fourth</servlet-name>
 		<servlet-class>com.realtor.UserRegister</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ur</servlet-name>
+		<servlet-name>fourth</servlet-name>
 		<url-pattern>/user_register</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>ul</servlet-name>
+		<servlet-name>fifth</servlet-name>
 		<servlet-class>com.realtor.UserLogin</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ul</servlet-name>
+		<servlet-name>fifth</servlet-name>
 		<url-pattern>/user_login</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>ap</servlet-name>
+		<servlet-name>sixth</servlet-name>
 		<servlet-class>com.realtor.AddPlot</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ap</servlet-name>
+		<servlet-name>sixth</servlet-name>
 		<url-pattern>/add_plot</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>up</servlet-name>
+		<servlet-name>seventh</servlet-name>
 		<servlet-class>com.realtor.UpdatePlot</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>up</servlet-name>
+		<servlet-name>seventh</servlet-name>
 		<url-pattern>/update_plot</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>bp</servlet-name>
+		<servlet-name>eighth</servlet-name>
 		<servlet-class>com.realtor.BuyPlot</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>bp</servlet-name>
+		<servlet-name>eighth</servlet-name>
 		<url-pattern>/buy_plot</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>sb</servlet-name>
+		<servlet-name>ninth</servlet-name>
 		<servlet-class>com.realtor.SalesBook</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>sb</servlet-name>
+		<servlet-name>ninth</servlet-name>
 		<url-pattern>/sales_book</url-pattern>
-	</servlet-mapping>
-	 <servlet>
-		<servlet-name>cp</servlet-name>
-		<servlet-class>com.realtor.CompletePayment</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>cp</servlet-name>
-		<url-pattern>/complete_payment</url-pattern>
 	</servlet-mapping>
 </web-app>

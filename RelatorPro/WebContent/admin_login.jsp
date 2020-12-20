@@ -5,6 +5,7 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
+<h1>Welcome to Admin Login Page</h1><br><br>
 <a href="./index.html">Home</a>
 </center>
 <br><br><br>

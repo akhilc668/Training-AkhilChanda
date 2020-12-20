@@ -5,6 +5,7 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
+<h1>Welcome to User Register Page</h1><br><br>
 <a href="user.jsp">Home</a> |
 <a href="user_register.jsp">User Register</a> |
 <a href="user_login.jsp">User Login</a> 
