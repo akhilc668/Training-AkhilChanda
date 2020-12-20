@@ -9,8 +9,9 @@
 <property name="ownerName" column="ownerName"></property>
 <property name="buyerName" column="buyerName"></property>
 <property name="bPhone" column="bPhone"></property>
-<property name="paymentType" column="paymentType"></property>
 <property name="paidAmount" column="paidAmount"></property>
+<property name="remainingAmount" column="remainingAmount"></property>
 <property name="paymentStatus" column="paymentStatus"></property>
+<property name="status" column="status"></property>
 </class>
 </hibernate-mapping>

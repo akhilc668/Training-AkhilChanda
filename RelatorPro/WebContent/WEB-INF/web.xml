@@ -40,4 +40,12 @@
 		<servlet-name>fifth</servlet-name>
 		<url-pattern>/user_login</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>sixth</servlet-name>
+		<servlet-class>com.realtor.AddPlot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sixth</servlet-name>
+		<url-pattern>/add_plot</url-pattern>
+	</servlet-mapping>
 </web-app>

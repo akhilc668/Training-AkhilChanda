@@ -6,9 +6,10 @@ public class Sales {
 	private String ownerName;
 	private String buyerName;
 	private String bPhone;
-	private String paymentType;
 	private int paidAmount;
+	private int reaminingAmount;
 	private String paymentStatus;
+	private String status;
 	public int getId() {
 		return id;
 	}
@@ -39,17 +40,18 @@ public class Sales {
 	public void setbPhone(String bPhone) {
 		this.bPhone = bPhone;
 	}
-	public String getPaymentType() {
-		return paymentType;
-	}
-	public void setPaymentType(String paymentType) {
-		this.paymentType = paymentType;
-	}
 	public int getPaidAmount() {
 		return paidAmount;
 	}
 	public void setPaidAmount(int paidAmount) {
 		this.paidAmount = paidAmount;
+	}
+	
+	public int getReaminingAmount() {
+		return reaminingAmount;
+	}
+	public void setReaminingAmount(int reaminingAmount) {
+		this.reaminingAmount = reaminingAmount;
 	}
 	public String getPaymentStatus() {
 		return paymentStatus;
@@ -57,5 +59,10 @@ public class Sales {
 	public void setPaymentStatus(String paymentStatus) {
 		this.paymentStatus = paymentStatus;
 	}
-	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 }
