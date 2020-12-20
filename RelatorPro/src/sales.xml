@@ -13,5 +13,6 @@
 <property name="remainingAmount" column="remainingAmount"></property>
 <property name="paymentStatus" column="paymentStatus"></property>
 <property name="status" column="status"></property>
+<property name="uid" column="uid"></property>
 </class>
 </hibernate-mapping>

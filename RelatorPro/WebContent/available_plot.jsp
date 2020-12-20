@@ -5,8 +5,8 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
-<a href="employee_home.jsp">Home</a> |
-<a href="view_plot.jsp">View plot</a> |
+<a href="user_home.jsp">Home</a> |
+<a href="available_plot.jsp">Available plot</a> |
 <a href="./index.html">Logout</a>
 </center>
 <br><br><br>
@@ -24,7 +24,8 @@
 			<td>Action</td>
 		</tr>
 <%
-List<Plot> l=new ViewPlotBean().view();
+int uid=(Integer)session.getAttribute("uid");
+List<Plot> l=new ViewPlotBean().viewByStatus("vacant");
 Iterator i=l.iterator();
 while(i.hasNext()){
 Plot vab=(Plot)i.next();
@@ -38,7 +39,7 @@ Plot vab=(Plot)i.next();
 			<td><%=vab.getAmount() %></td>
 			<td><%=vab.getAddress() %></td>
 			<td><%=vab.getStatus() %></td>
-			<td><a href="update_plot.jsp?id=<%=vab.getId()%>">update</a></td>
+			<td><a href="buy_plot.jsp?pid=<%=vab.getId()%>&uid=<%=uid%>">Buy</a></td>
 		</tr>
 <%} %>
 </table>

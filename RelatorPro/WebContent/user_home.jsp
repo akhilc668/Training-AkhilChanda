@@ -6,6 +6,7 @@
 <br><br><br>
 <center>
 <a href="user_home.jsp">Home</a> |
+<a href="available_plot.jsp">Available plot</a> |
 <a href="index.html">Logout</a> 
 </center>
 <br><br><br>
