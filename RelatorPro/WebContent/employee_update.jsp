@@ -16,7 +16,7 @@
 <%
 int id=Integer.parseInt(request.getParameter("id"));
 Employee p=EmployeeBean.getById(id); %>
-<form action="./update_employee" method="post" align="center">
+<form action="./employee_update" method="post" align="center">
 <input type="hidden" name="id" value="<%=p.getId()%>">
 Employee name: <input type="text" name="ename" value="<%=p.getEname()%>"><br><br>
 Email: <input type="email" name="email" value="<%=p.getEmail()%>"><br><br>

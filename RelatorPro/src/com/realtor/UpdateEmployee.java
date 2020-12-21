@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.pojo.Employee;
 
 
-public class EmployeeUpdate extends HttpServlet {
+public class UpdateEmployee extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee emp=new Employee();
 		emp.setId(Integer.parseInt(request.getParameter("id")));
@@ -23,10 +23,10 @@ public class EmployeeUpdate extends HttpServlet {
 		boolean status=false;
 		status=EmployeeUpdateBean.update(emp);
 		if(status) {
-			response.sendRedirect("./update_employee.jsp?id="+emp.getId()+"&msg=Update sucessfully");
+			response.sendRedirect("./employee_update.jsp?id="+emp.getId()+"&msg=Update sucessfully");
 		}
 		else
-			response.sendRedirect("./update_employee.jsp?id="+emp.getId()+"&msg=update failed");
+			response.sendRedirect("./employee_update.jsp?id="+emp.getId()+"&msg=update failed");
 	}
 
 }

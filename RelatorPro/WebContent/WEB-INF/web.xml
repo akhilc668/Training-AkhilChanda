@@ -107,4 +107,12 @@
 		<servlet-name>thirteenth</servlet-name>
 		<url-pattern>/update_user</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>fourteen</servlet-name>
+		<servlet-class>com.realtor.UpdateEmployee</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fourteen</servlet-name>
+		<url-pattern>/employee_update</url-pattern>
+	</servlet-mapping>
 </web-app>
