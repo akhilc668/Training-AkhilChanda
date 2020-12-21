@@ -5,10 +5,8 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
-<%int id=(Integer)session.getAttribute("eid");%>
 <h1>Welcome to Sales Book Page</h1><br><br>
 <a href="employee_home.jsp">Home</a> |
-<a href="update_employee.jsp?id=<%=id %>">Update employee</a> |
 <a href="view_plot.jsp">View plot</a> |
 <a href="bought_plot.jsp">Sales Book</a> |
 <a href="./index.html">Logout</a>
@@ -36,7 +34,14 @@
 			<td>Action</td>
 		</tr>
 <%
-List<Sales> l=ViewSalesBean.viewSales();
+String paymentStatus=request.getParameter("paymentStatus");
+List<Sales> l=null;
+if (paymentStatus.equals("select")) {
+	l = ViewSalesBean.viewSales();
+} else {
+	l = ViewSalesBean.viewSalesByPaymentStatus(paymentStatus);
+}
+ViewSalesBean.viewSales();
 Iterator i=l.iterator();
 while(i.hasNext()){
 Sales vab=(Sales)i.next();

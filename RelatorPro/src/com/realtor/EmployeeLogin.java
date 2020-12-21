@@ -5,15 +5,19 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.pojo.Employee;
 
 
 public class EmployeeLogin extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email=request.getParameter("email");
 		String password=request.getParameter("password");
-		boolean status=false;
-		status=EmployeeLoginBean.login(email, password);
-		if(status) {
+		Employee e=EmployeeLoginBean.login(email, password);
+		HttpSession hs=request.getSession();
+		if(e!=null) {
+			hs.setAttribute("eid", e.getId());
 			response.sendRedirect("./employee_home.jsp?msg=login sucessfully");
 		}
 		else

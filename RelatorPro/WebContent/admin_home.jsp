@@ -8,6 +8,7 @@
 <h1>Welcome to Admin Home Page</h1><br><br>
 <a href="admin_home.jsp">Home</a> |
 <a href="employee_register.jsp">Employee Register</a> |
+<a href="employee_details.jsp">Employee Details</a> |
 <a href="add_plot.jsp">Add plot</a> |
 <a href="./index.html">Logout</a>
 </center>

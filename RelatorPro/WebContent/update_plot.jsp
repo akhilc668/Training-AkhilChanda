@@ -24,7 +24,7 @@ Email: <input type="email" name="email" value="<%=p.getEmail()%>"><br><br>
 Phone: <input type="number" name="phone" value="<%=p.getPhone()%>"><br><br>
 Amount: <input type="number" name="amount" value="<%=p.getAmount()%>"><br><br>
 Venture: <input type="text" name="venture" value="<%=p.getVenture()%>"><br><br>
-Address: <textarea rows="5" cols="10" name="address"><%=p.getAddress()%></textarea><br><br>
+Address: <input type="text" name="address" value="<%=p.getAddress()%>"><br><br>
 Status: <select name="status">
 <option value="<%=p.getStatus()%>"><%=p.getStatus()%></option>
 <option value="vacant">vacant</option>

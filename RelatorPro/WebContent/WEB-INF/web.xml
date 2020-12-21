@@ -91,4 +91,12 @@
 		<servlet-name>eleventh</servlet-name>
 		<url-pattern>/search</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>twelfth</servlet-name>
+		<servlet-class>com.realtor.EmployeeUpdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>twelfth</servlet-name>
+		<url-pattern>/update_employee</url-pattern>
+	</servlet-mapping>
 </web-app>

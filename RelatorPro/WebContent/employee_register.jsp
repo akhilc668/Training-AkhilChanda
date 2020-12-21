@@ -8,6 +8,7 @@
 <h1>Welcome to Employee Register Page</h1><br><br>
 <a href="admin_home.jsp">Home</a> |
 <a href="employee_register.jsp">Employee Register</a> |
+<a href="employee_details.jsp">Employee Details</a> |
 <a href="add_plot.jsp">Add plot</a> |
 <a href="./index.html">Logout</a>
 </center>
@@ -19,7 +20,7 @@ Password: <input type="password" name="password"><br><br>
 phone: <input type="number" name="phone"><br><br>
 Gender: <input type="radio" name="gender" value="Male">Male
 <input type="radio" name="gender" value="Female">Female<br><br>
-Address: <input type="text"  name="address"></textarea><br><br>
+Address: <input type="text"  name="address"><br><br>
 <input type="submit" value="register">
 </form>
 </body>
