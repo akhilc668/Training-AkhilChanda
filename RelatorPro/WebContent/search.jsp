@@ -35,7 +35,7 @@
 			<td>Action</td>
 		</tr>
 		<%
-			List<Plot> l = ViewPlotBean.viewByStatus("vacant");
+			List<Plot> l = (List<Plot>)session.getAttribute("list");
 		Iterator i = l.iterator();
 		while (i.hasNext()) {
 			Plot vab = (Plot) i.next();

@@ -19,7 +19,7 @@ Email: <input type="email" name="email"><br><br>
 Phone: <input type="number" name="phone"><br><br>
 Amount: <input type="number" name="amount"><br><br>
 Venture: <input type="text" name="venture"><br><br>
-Address: <textarea rows="5" cols="10" name="address"></textarea><br><br>
+Address: <input type="text"  name="address"></textarea><br><br>
 <input type="submit" value="Add">
 </form>
 </body>
