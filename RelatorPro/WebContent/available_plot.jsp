@@ -9,7 +9,7 @@
 	<center>
 		<h1>Welcome to Available Plot Page</h1>
 		<br>
-		<br> <a href="user_home.jsp">Home</a> | <a
+		<br> <a href="user_home.jsp">Home</a> | <a href="update_user.jsp">Update User</a> |<a
 			href="available_plot.jsp">Available plot</a> | <a
 			href="user_bought_plot.jsp">Bought plot</a> | <a href="index.html">Logout</a>
 	</center>

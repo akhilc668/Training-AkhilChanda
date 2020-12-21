@@ -5,20 +5,21 @@
 <body bgcolor="#E6E6FA">
 <br><br><br>
 <center>
-<h1>Welcome to Update Employee Page</h1><br><br>
-<a href="employee_home.jsp">Home</a> |
-<a href="view_plot.jsp">View plot</a> |
-<a href="bought_plot.jsp">Sales Book</a> |
-<a href="./index.html">Logout</a>
+<h1>Welcome to User Home Page</h1><br><br>
+<a href="user_home.jsp">Home</a> |
+<a href="update_user.jsp">Update User</a> |
+<a href="available_plot.jsp">Available plot</a> |
+<a href="user_bought_plot.jsp">Bought plot</a> |
+<a href="index.html">Logout</a> 
 </center>
 <br><br><br>
-<%@page import="com.pojo.Employee,com.realtor.EmployeeBean"%>
+<%@page import="com.pojo.User"%>
 <%
-int id=Integer.parseInt(request.getParameter("id"));
-Employee p=EmployeeBean.getById(id); %>
-<form action="./update_employee" method="post" align="center">
+User p=(User)session.getAttribute("user");
+%>
+<form action="./update_user" method="post" align="center">
 <input type="hidden" name="id" value="<%=p.getId()%>">
-Employee name: <input type="text" name="ename" value="<%=p.getEname()%>"><br><br>
+User name: <input type="text" name="uname" value="<%=p.getUname()%>"><br><br>
 Email: <input type="email" name="email" value="<%=p.getEmail()%>"><br><br>
  <input type="hidden" name="password" value="<%=p.getPassword()%>"><br><br>
 phone: <input type="number" name="phone" value="<%=p.getPhone()%>"><br><br>
