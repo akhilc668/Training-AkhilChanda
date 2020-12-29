@@ -22,6 +22,7 @@ public class UpdatePlot extends HttpServlet {
 		p.setVenture(request.getParameter("venture"));
 		p.setAddress(request.getParameter("address"));
 		p.setStatus(request.getParameter("status"));
+		p.setArea(request.getParameter("area")+" sqft");
 		boolean status=false;
 		status=UpdatePlotBean.update(p);
 		if(status) {

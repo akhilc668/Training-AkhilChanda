@@ -15,7 +15,7 @@
 </center>
 <br><br><br>
 <form action="search_sales.jsp" align="center">
-<select name="paymentStatus">
+By PaymentStatus: <select name="paymentStatus">
 <option value="select">Select</option>
 <option value="completed">Completed</option>
 <option value="incomplete">Incomplete</option>

@@ -15,7 +15,7 @@
 </center>
 <br><br><br>
 <form action="search_sales.jsp" align="center">
-<select name="paymentStatus">
+By PaymentStatus: <select name="paymentStatus">
 <option value="select">Select</option>
 <option value="completed">Completed</option>
 <option value="incomplete">Incomplete</option>
@@ -33,6 +33,7 @@
 			<td>RemainingAmount</td>
 			<td>paymentStatus</td>
 			<td>Status</td>
+			<td>Plot Status</td>
 			<td>Action</td>
 		</tr>
 <%
@@ -51,6 +52,7 @@ Plot p=ViewPlotBean.getById(vab.getPlotId());
 			<td><%=vab.getRemainingAmount() %></td>
 			<td><%=vab.getPaymentStatus() %></td>
 			<td><%=vab.getStatus() %></td>
+			<td><%=p.getStatus()%></td>
 			<%if(vab.getRemainingAmount()>=0&&(p.getStatus().equals("reserved")||p.getStatus().equals("vacant"))){ %>
 			<td><a href="./sales_book?id=<%=vab.getId()%>">Accept and update plot</a></td>
 			<%}else{ %>

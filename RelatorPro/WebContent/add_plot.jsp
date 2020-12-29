@@ -18,9 +18,10 @@ PlotNo: <input type="text" name="plotNo"><br><br>
 OwnerName: <input type="text" name="ownerName"><br><br>
 Email: <input type="email" name="email"><br><br>
 Phone: <input type="number" name="phone"><br><br>
+Area: <input type="number" name="area">Sqft<br><br>
 Amount: <input type="number" name="amount"><br><br>
 Venture: <input type="text" name="venture"><br><br>
-Address: <input type="text"  name="address"></textarea><br><br>
+Address: <input type="text"  name="address"><br><br>
 <input type="submit" value="Add">
 </form>
 </body>

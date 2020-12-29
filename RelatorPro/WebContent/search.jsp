@@ -17,8 +17,8 @@
 	<br>
 	<br>
 	<form action="./search" method="post" align="center">
-		<input type="text" name="address" placeholder="enter a place">
-		<input type="text" name="venture" placeholder="enter a venture">
+		By Address: <input type="text" name="address" placeholder="enter a place">
+		Or By Venture<input type="text" name="venture" placeholder="enter a venture">
 		<input type="submit" value="search">
 	</form>
 	<%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,java.util.*"%>

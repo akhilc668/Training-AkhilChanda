@@ -15,13 +15,17 @@
 <%@page import="com.pojo.Plot,com.realtor.ViewPlotBean"%>
 <%
 int id=Integer.parseInt(request.getParameter("id"));
-Plot p=ViewPlotBean.getById(id); %>
+Plot p=ViewPlotBean.getById(id); 
+String area=p.getArea();
+String size=area.substring(0,p.getArea().indexOf(" "));
+%>
 <form action="./update_plot" method="post" align="center">
 <input type="hidden" name="id" value="<%=p.getId()%>">
 PlotNo: <input type="text" name="plotNo" value="<%=p.getPlotNo()%>"><br><br>
 OwnerName: <input type="text" name="ownerName" value="<%=p.getOwnerName()%>"><br><br>
 Email: <input type="email" name="email" value="<%=p.getEmail()%>"><br><br>
 Phone: <input type="number" name="phone" value="<%=p.getPhone()%>"><br><br>
+Area: <input type="number" name="area" value="<%=size%>">Sqft<br><br>
 Amount: <input type="number" name="amount" value="<%=p.getAmount()%>"><br><br>
 Venture: <input type="text" name="venture" value="<%=p.getVenture()%>"><br><br>
 Address: <input type="text" name="address" value="<%=p.getAddress()%>"><br><br>

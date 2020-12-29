@@ -21,7 +21,7 @@
 	<br>
 	<%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,java.util.*"%>
 	<form action="./search_plot.jsp" align="center">
-		<select name="status">
+		By Status:<select name="status">
 			<option value="select">Select</option>
 			<option value="vacant">Vacant</option>
 			<option value="reserved">Reserved</option>
@@ -36,6 +36,7 @@
 			<td>Email</td>
 			<td>Phone</td>
 			<td>Venture</td>
+			<td>Area</td>
 			<td>amount</td>
 			<td>Address</td>
 			<td>Status</td>
@@ -59,6 +60,7 @@
 			<td><%=vab.getEmail()%></td>
 			<td><%=vab.getPhone()%></td>
 			<td><%=vab.getVenture()%></td>
+			<td><%=vab.getArea()%></td>
 			<td><%=vab.getAmount()%></td>
 			<td><%=vab.getAddress()%></td>
 			<td><%=vab.getStatus()%></td>

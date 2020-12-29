@@ -14,7 +14,7 @@
 </center>
 <br><br><br>
 <form action="search_employee.jsp" align="center">
-<input type="text" name="address">
+By Address: <input type="text" name="address">
 <input type="submit" value="search">
 </form>
 <%@page import="com.pojo.Employee,com.realtor.EmployeeBean,java.util.*" %>
@@ -25,6 +25,7 @@
 			<td>Phone</td>
 			<td>Address</td>
 			<td>Gender</td>
+			<td>Salary</td>
 			<td>Action</td>
 		</tr>
 <%
@@ -39,6 +40,7 @@ Employee vab=(Employee)i.next();
 			<td><%=vab.getPhone() %></td>
 			<td><%=vab.getAddress() %></td>
 			<td><%=vab.getGender() %></td>
+			<td><%=vab.getSalary() %></td>
 			<td><a href="update_employee.jsp?id=<%=vab.getId()%>">update</a></td>
 		</tr>
 <%} %>

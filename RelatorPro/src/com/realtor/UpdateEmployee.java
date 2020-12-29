@@ -20,6 +20,7 @@ public class UpdateEmployee extends HttpServlet {
 		emp.setPhone(request.getParameter("phone"));
 		emp.setGender(request.getParameter("gender"));
 		emp.setAddress(request.getParameter("address"));
+		emp.setSalary(Integer.parseInt(request.getParameter("salary")));
 		boolean status=false;
 		status=EmployeeUpdateBean.update(emp);
 		if(status) {

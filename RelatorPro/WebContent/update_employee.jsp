@@ -21,7 +21,7 @@ Employee p=EmployeeBean.getById(id); %>
 <input type="hidden" name="id" value="<%=p.getId()%>">
 Employee name: <input type="text" name="ename" value="<%=p.getEname()%>"><br><br>
 Email: <input type="email" name="email" value="<%=p.getEmail()%>"><br><br>
- <input type="hidden" name="password" value="<%=p.getPassword()%>"><br><br>
+ <input type="hidden" name="password" value="<%=p.getPassword()%>">
 phone: <input type="number" name="phone" value="<%=p.getPhone()%>"><br><br>
 <%if(p.getGender().equals("Male")) {%>
 Gender: <input type="radio" name="gender" value="Male" checked="checked">Male
@@ -31,6 +31,7 @@ Gender: <input type="radio" name="gender" value="Male">Male
 <input type="radio" name="gender" value="Female"  checked="checked">Female<br><br>
 <%} %>
 Address: <input type="text"  name="address" value="<%=p.getAddress()%>"><br><br>
+Salary: <input type="number" name="salary" value="<%=p.getSalary() %>"><br><br>
 <input type="submit" value="update">
 </form>
 </body>

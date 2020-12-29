@@ -8,6 +8,7 @@ public class Employee {
 	private String address;
 	private String password;
 	private String gender;
+	private int salary;
 	public int getId() {
 		return id;
 	}
@@ -50,5 +51,10 @@ public class Employee {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}	
 }

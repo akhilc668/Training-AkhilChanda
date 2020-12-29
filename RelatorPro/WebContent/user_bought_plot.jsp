@@ -21,6 +21,7 @@
 			<td>Email</td>
 			<td>Phone</td>
 			<td>Venture</td>
+			<td>Area</td>
 			<td>amount</td>
 			<td>Address</td>
 			<td>Plot Status</td>
@@ -44,6 +45,7 @@ Plot p=ViewPlotBean.getById(vab.getPlotId());
 			<td><%=p.getEmail() %></td>
 			<td><%=p.getPhone() %></td>
 			<td><%=p.getVenture() %></td>
+			<td><%=p.getArea() %></td>
 			<td><%=p.getAmount() %></td>
 			<td><%=p.getAddress() %></td>
 			<%if(p.getStatus().equals("reserved")||p.getStatus().equals("vacant")){ %>

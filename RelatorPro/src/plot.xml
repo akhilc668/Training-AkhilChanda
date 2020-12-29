@@ -13,5 +13,6 @@
 <property name="amount" column="amount"></property>
 <property name="venture" column="venture"></property>
 <property name="status" column="status"></property>
+<property name="area" column="area"></property>
 </class>
 </hibernate-mapping>

@@ -10,6 +10,7 @@ public class Plot {
 	private int amount;
 	private String venture;
 	private String status;
+	private String area;
 	public int getId() {
 		return id;
 	}
@@ -63,5 +64,11 @@ public class Plot {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	public String getArea() {
+		return area;
+	}
+	public void setArea(String area) {
+		this.area = area;
 	}
 }

@@ -17,8 +17,8 @@
 	<br>
 	<br>
 	<form action="./search" method="post" align="center">
-		<input type="text" name="address" placeholder="enter a place">
-		<input type="text" name="venture" placeholder="enter a venture">
+		By Address: <input type="text" name="address" placeholder="enter a place">
+		Or By Venture: <input type="text" name="venture" placeholder="enter a venture">
 		<input type="submit" value="search">
 	</form>
 	<%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,java.util.*"%>
@@ -29,6 +29,7 @@
 			<td>Email</td>
 			<td>Phone</td>
 			<td>Venture</td>
+			<td>Area</td>
 			<td>amount</td>
 			<td>Address</td>
 			<td>Status</td>
@@ -46,6 +47,7 @@
 			<td><%=vab.getEmail()%></td>
 			<td><%=vab.getPhone()%></td>
 			<td><%=vab.getVenture()%></td>
+			<td><%=vab.getArea() %></td>
 			<td><%=vab.getAmount()%></td>
 			<td><%=vab.getAddress()%></td>
 			<td><%=vab.getStatus()%></td>

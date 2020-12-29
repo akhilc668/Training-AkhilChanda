@@ -21,6 +21,7 @@ phone: <input type="number" name="phone"><br><br>
 Gender: <input type="radio" name="gender" value="Male">Male
 <input type="radio" name="gender" value="Female">Female<br><br>
 Address: <input type="text"  name="address"><br><br>
+Salary: <input type="number" name="salary"><br><br>
 <input type="submit" value="register">
 </form>
 </body>

@@ -21,6 +21,7 @@ public class AddPlot extends HttpServlet {
 		p.setVenture(request.getParameter("venture"));
 		p.setAddress(request.getParameter("address"));
 		p.setStatus("vacant");
+		p.setArea(request.getParameter("area")+" sqft");
 		boolean status=false;
 		status=AddPlotBean.add(p);
 		if(status) {
