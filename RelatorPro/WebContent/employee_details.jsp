@@ -13,10 +13,10 @@
 <a href="./index.html">Logout</a>
 </center>
 <br><br><br>
-<form action="search_employee.jsp" align="center">
+<form action="employee_details.jsp" align="center">
 By Address: <input type="text" name="address">
 <input type="submit" value="search">
-</form>
+</form><br><br>
 <%@page import="com.pojo.Employee,com.realtor.EmployeeBean,java.util.*" %>
 <table border="2px;" align="center" width="1000" hight="300">
 		<tr>
@@ -29,7 +29,13 @@ By Address: <input type="text" name="address">
 			<td>Action</td>
 		</tr>
 <%
-List<Employee> l=EmployeeBean.viewEmployee();
+String address=request.getParameter("address");
+List<Employee> l=null;
+if(address==null || address.equals("")){
+l=EmployeeBean.viewEmployee();
+}else{
+	l=EmployeeBean.search(address);
+}
 Iterator i=l.iterator();
 while(i.hasNext()){
 Employee vab=(Employee)i.next();

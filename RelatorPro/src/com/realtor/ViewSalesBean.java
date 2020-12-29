@@ -46,6 +46,20 @@ public class ViewSalesBean {
 		return null;
 	}
 	
+	public static List<Sales> search(int uid,String paymentStatus){
+		Session se=Config.config();
+		Transaction tx=se.beginTransaction();
+		Query qe=se.createQuery("from Sales s where s.uid=:x and s.paymentStatus=:y");
+		qe.setParameter("x", uid);
+		qe.setParameter("y", paymentStatus);
+		List<Sales> li=qe.list();
+		tx.commit();
+		if(!li.isEmpty()) {
+			return li;
+		}
+		return null;
+	}
+	
 	public static List<Sales> viewSalesByPaymentStatus(String paymentStatus){
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();

@@ -16,11 +16,11 @@
 	<br>
 	<br>
 	<br>
-	<form action="./search" method="post" align="center">
+	<form action="./available_plot.jsp" method="post" align="center">
 		By Address: <input type="text" name="address" placeholder="enter a place">
 		Or By Venture: <input type="text" name="venture" placeholder="enter a venture">
 		<input type="submit" value="search">
-	</form>
+	</form><br><br>
 	<%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,java.util.*"%>
 	<table border="2px;" align="center" width="1000" hight="300">
 		<tr>
@@ -36,7 +36,14 @@
 			<td>Action</td>
 		</tr>
 		<%
-			List<Plot> l = ViewPlotBean.viewByStatus("vacant");
+		String address=request.getParameter("address");
+		String venture=request.getParameter("venture");
+		List<Plot> l =null;
+		if((address==null&&venture==null)||(address.equals("")&&venture.equals(""))){
+			l= ViewPlotBean.viewByStatus("vacant");
+		}else{
+		 l=ViewPlotBean.search(address,venture);
+		}
 		Iterator i = l.iterator();
 		while (i.hasNext()) {
 			Plot vab = (Plot) i.next();

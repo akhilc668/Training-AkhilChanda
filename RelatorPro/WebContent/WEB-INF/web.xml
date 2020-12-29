@@ -85,34 +85,26 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>eleventh</servlet-name>
-		<servlet-class>com.realtor.Search</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>eleventh</servlet-name>
-		<url-pattern>/search</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>twelfth</servlet-name>
 		<servlet-class>com.realtor.EmployeeUpdate</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>twelfth</servlet-name>
+		<servlet-name>eleventh</servlet-name>
 		<url-pattern>/update_employee</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>thirteenth</servlet-name>
+		<servlet-name>twelfth</servlet-name>
 		<servlet-class>com.realtor.UserUpdate</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>thirteenth</servlet-name>
+		<servlet-name>twelfth</servlet-name>
 		<url-pattern>/update_user</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>fourteen</servlet-name>
+		<servlet-name>thirteenth</servlet-name>
 		<servlet-class>com.realtor.UpdateEmployee</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>fourteen</servlet-name>
+		<servlet-name>thirteenth</servlet-name>
 		<url-pattern>/employee_update</url-pattern>
 	</servlet-mapping>
 </web-app>

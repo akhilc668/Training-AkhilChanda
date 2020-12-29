@@ -15,7 +15,7 @@
 </center>
 <br><br><br>
 <%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,java.util.*" %>
-<form action="./search_plot.jsp" align="center">
+<form action="./view_plot.jsp" align="center">
 By Status: <select name="status">
 <option value="select">Select</option>
 <option value="vacant">Vacant</option>
@@ -23,7 +23,7 @@ By Status: <select name="status">
 <option value="sold">Sold</option>
 </select>
 <input type="submit" value="search">
-</form>
+</form><br><br>
 <table border="2px;" align="center" width="1000" hight="300">
 		<tr>
 			<td>PlotNo</td>
@@ -38,10 +38,16 @@ By Status: <select name="status">
 			<td>Action</td>
 		</tr>
 <%
-List<Plot> l=ViewPlotBean.view();
-Iterator i=l.iterator();
-while(i.hasNext()){
-Plot vab=(Plot)i.next();
+String status = request.getParameter("status");
+List<Plot> l = null;
+if (status==null || status.equals("select")) {
+	l = ViewPlotBean.view();
+} else {
+	l = ViewPlotBean.viewByStatus(status);
+}
+Iterator i = l.iterator();
+while (i.hasNext()) {
+	Plot vab = (Plot) i.next();
 %>
 <tr>
 			<td><%=vab.getPlotNo() %></td>

@@ -13,6 +13,14 @@
 <a href="index.html">Logout</a> 
 </center>
 <br><br><br>
+<form action="user_bought_plot.jsp" align="center">
+By PaymentStatus: <select name="paymentStatus">
+<option value="select">Select</option>
+<option value="completed">Completed</option>
+<option value="incomplete">Incomplete</option>
+</select>
+<input type="submit" value="search">
+</form><br><br>
 <%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,com.pojo.Sales,com.realtor.ViewSalesBean,java.util.*" %>
 <table border="2px;" align="center" width="1000" hight="300">
 		<tr>
@@ -33,7 +41,13 @@
 		</tr>
 <%
 int uid=(Integer)session.getAttribute("uid");
-List<Sales> l=ViewSalesBean.viewSalesByUser(uid);
+String paymentStatus=request.getParameter("paymentStatus");
+List<Sales> l=null;
+if (paymentStatus==null || paymentStatus.equals("select")) {
+	l=ViewSalesBean.viewSalesByUser(uid);
+} else {
+	l = ViewSalesBean.search(uid,paymentStatus);
+}
 Iterator i=l.iterator();
 while(i.hasNext()){
 Sales vab=(Sales)i.next();
