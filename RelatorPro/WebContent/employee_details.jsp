@@ -47,7 +47,7 @@ Employee vab=(Employee)i.next();
 			<td><%=vab.getAddress() %></td>
 			<td><%=vab.getGender() %></td>
 			<td><%=vab.getSalary() %></td>
-			<td><a href="update_employee.jsp?id=<%=vab.getId()%>">update</a></td>
+			<td><a href="admin_update_employee.jsp?id=<%=vab.getId()%>">update</a></td>
 		</tr>
 <%} %>
 </table>

@@ -24,7 +24,7 @@ public class UpdateEmployee extends HttpServlet {
 		boolean status=false;
 		status=EmployeeUpdateBean.update(emp);
 		if(status) {
-			response.sendRedirect("./employee_update.jsp?id="+emp.getId()+"&msg=Update sucessfully");
+			response.sendRedirect("./employee_home.jsp?id="+emp.getId()+"&msg=Update sucessfully");
 		}
 		else
 			response.sendRedirect("./employee_update.jsp?id="+emp.getId()+"&msg=update failed");
