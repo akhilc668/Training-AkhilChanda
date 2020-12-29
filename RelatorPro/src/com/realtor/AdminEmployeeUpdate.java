@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.pojo.Employee;
 
 
-public class EmployeeUpdate extends HttpServlet {
+public class AdminEmployeeUpdate extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee emp=new Employee();
 		emp.setId(Integer.parseInt(request.getParameter("id")));

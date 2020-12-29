@@ -85,11 +85,11 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>eleventh</servlet-name>
-		<servlet-class>com.realtor.EmployeeUpdate</servlet-class>
+		<servlet-class>com.realtor.AdminEmployeeUpdate</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>eleventh</servlet-name>
-		<url-pattern>/update_employee</url-pattern>
+		<url-pattern>/admin_update_employee</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>twelfth</servlet-name>
