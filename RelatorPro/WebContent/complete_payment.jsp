@@ -4,21 +4,19 @@
 <head>
 <style>
 body, html {
-  height: 100%;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .bg {
-  /* The image used */
-  background-image: url("background.png");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+	/* The image used */
+	background-image: url("background.png");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
 }
 </style>
 <link
@@ -28,6 +26,17 @@ body, html {
 	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#paidAmount").change(function() {
+			var paidAmount = $(this).val();
+			var ramount = $("#ramount").val();
+			if (paidAmount > ramount) {
+				alert("Paid amount is greater than remaining amount.")
+			}
+		});
+	});
+</script>
 </head>
 <body bgcolor="#E6E6FA" class="bg">
 	<br>
@@ -51,12 +60,13 @@ body, html {
 						<form action="./complete_payment" method="post">
 							<input type="hidden" name="id" value="<%=id%>">
 							<div class="form-group">
-								Reamining Amount: <input type="number" value="<%=RemainingAmount %>" readonly="readonly"
-									class="form-control">
+								Reamining Amount: <input type="number"
+									value="<%=RemainingAmount%>" readonly="readonly"
+									class="form-control" id="ramount">
 							</div>
 							<div class="form-group">
 								Amount: <input type="number" name="paidAmount"
-									class="form-control">
+									class="form-control" id="paidAmount">
 							</div>
 							<input type="submit" class="btn btn-primary" value="Pay">
 						</form>

@@ -16,17 +16,17 @@ public class CompletePayment extends HttpServlet {
 		Sales s = ViewSalesBean.getById(id);
 		if (s.getRemainingAmount() >= paidAmount) {
 			int remainingAmount = s.getRemainingAmount() - paidAmount;
-			paidAmount = s.getPaidAmount() + paidAmount;
-			s.setPaidAmount(paidAmount);
+			int paidAmounts = s.getPaidAmount() + paidAmount;
+			s.setPaidAmount(paidAmounts);
 			s.setRemainingAmount(remainingAmount);
 			boolean status = false;
 			status = CompletePaymentBean.updateSales(s);
 			if (status) {
 				response.sendRedirect("./user_bought_plot.jsp?msg=completed sucessfully");
 			} else
-				response.sendRedirect("./user_bought_plot.jsp?msg=complete failed");
+				response.sendRedirect("./complete_payment.jsp?id="+id+"&remainingAmount="+(remainingAmount+paidAmount)+"&msg=complete failed");
 		} else
-			response.sendRedirect("./user_bought_plot.jsp?msg=amount is more than the remaining amount");
+			response.sendRedirect("./complete_payment.jsp?id="+id+"&remainingAmount="+s.getRemainingAmount()+"&msg=amount is more than the remaining amount");
 	}
 
 }

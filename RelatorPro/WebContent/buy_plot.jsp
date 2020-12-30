@@ -29,6 +29,17 @@ body, html {
 	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#paidAmount").change(function() {
+			var paidAmount = $(this).val();
+			var ramount = $("#ramount").val();
+			if (paidAmount > ramount) {
+				alert("Paid amount is greater than autal amount.")
+			}
+		});
+	});
+</script>
 </head>
 <body bgcolor="#E6E6FA" class="bg">
 	<br>
@@ -67,13 +78,13 @@ body, html {
 							</div>
 							<div class="form-group">
 								Amount:<input type="text" value="<%=p.getAmount()%>"
-									readonly="readonly" class="form-control">
+									readonly="readonly" class="form-control" id="ramount">
 							</div>
 							<div class="form-group">
 								Amount to pay: <input type="number" name="paidAmount"
-									class="form-control" placeholder="Enter the Amount">
+									class="form-control" placeholder="Enter the Amount" id="paidAmount">
 							</div>
-							<input type="submit" class="btn btn-primary" value="serach">
+							<input type="submit" class="btn btn-primary" value="buy">
 						</form>
 					</div>
 				</div>
