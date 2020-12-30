@@ -64,17 +64,17 @@ body, html {
 	<div class="container">
 		<%@page import="com.pojo.Plot,com.realtor.ViewPlotBean,java.util.*"%>
 		<table class="table table-bordered table-light">
-			<tr>
-				<td>PlotNo</td>
-				<td>OwnerName</td>
-				<td>Email</td>
-				<td>Phone</td>
-				<td>Venture</td>
-				<td>Area</td>
-				<td>amount</td>
-				<td>Address</td>
-				<td>Status</td>
-				<td>Action</td>
+			<tr class="table-success">
+				<td><b>PlotNo</b></td>
+				<td><b>OwnerName</b></td>
+				<td><b>Email</b></td>
+				<td><b>Phone</b></td>
+				<td><b>Venture</b></td>
+				<td><b>Area</b></td>
+				<td><b>amount</b></td>
+				<td><b>Address</b></td>
+				<td><b>Status</b></td>
+				<td><b>Action</b></td>
 			</tr>
 			<%
 				String address = request.getParameter("address");

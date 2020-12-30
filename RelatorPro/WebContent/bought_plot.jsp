@@ -70,17 +70,17 @@ body, html {
 		<%@page
 			import="com.pojo.Plot,com.realtor.ViewPlotBean,com.pojo.Sales,com.realtor.ViewSalesBean,java.util.*"%>
 		<table class="table table-bordered table-light">
-			<tr>
-				<td>plotId</td>
-				<td>OwnerName</td>
-				<td>BuyerName</td>
-				<td>BuyerPhone</td>
-				<td>paidAmount</td>
-				<td>RemainingAmount</td>
-				<td>paymentStatus</td>
-				<td>Status</td>
-				<td>Plot Status</td>
-				<td>Action</td>
+			<tr class="table-success">
+				<td><b>plotId</td>
+				<td><b>OwnerName</b></td>
+				<td><b>BuyerName</b></td>
+				<td><b>BuyerPhone</b></td>
+				<td><b>paidAmount</b></td>
+				<td><b>RemainingAmount</b></td>
+				<td><b>paymentStatus</b></td>
+				<td><b>Status</b></td>
+				<td><b>Plot Status</b></td>
+				<td><b>Action</b></td>
 			</tr>
 			<%
 				String paymentStatus = request.getParameter("paymentStatus");

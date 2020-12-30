@@ -61,15 +61,15 @@ body, html {
 		<%@page
 			import="com.pojo.Employee,com.realtor.EmployeeBean,java.util.*"%>
 		<table class="table table-bordered table-light">
-			<tr>
-				<td>Name</td>
-				<td>Email</td>
-				<td>Phone</td>
-				<td>Address</td>
-				<td>Gender</td>
-				<td>Designation</td>
-				<td>Salary</td>
-				<td>Action</td>
+			<tr class="table-success">
+				<td><b>Name</b></td>
+				<td><b>Email</b></td>
+				<td><b>Phone</b></td>
+				<td><b>Address</b></td>
+				<td><b>Gender</b></td>
+				<td><b>Designation</b></td>
+				<td><b>Salary</b></td>
+				<td><b>Action</b></td>
 			</tr>
 			<%
 				String address = request.getParameter("address");
