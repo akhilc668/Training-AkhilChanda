@@ -1,37 +1,82 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<head>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 <body bgcolor="#E6E6FA">
-<br><br><br>
-<center>
-<h1>Welcome to Employee Home Page</h1><br><br>
-<a href="employee_home.jsp">Home</a> |
-<a href="view_plot.jsp">View plot</a> |
-<a href="bought_plot.jsp">Sales Book</a> |
-<a href="./index.html">Logout</a>
-</center>
-<br><br><br>
-<%@page import="com.pojo.Employee,com.realtor.EmployeeBean"%>
-<%
-int id=Integer.parseInt(request.getParameter("id"));
-Employee p=EmployeeBean.getById(id); %>
-<form action="./employee_update" method="post" align="center">
-<input type="hidden" name="id" value="<%=p.getId()%>">
-Employee name: <input type="text" name="ename" value="<%=p.getEname()%>"><br><br>
-Email: <input type="email" name="email" value="<%=p.getEmail()%>"><br><br>
-Password: <input type="password" name="password" value="<%=p.getPassword()%>"><br><br>
-phone: <input type="number" name="phone" value="<%=p.getPhone()%>"><br><br>
-<%if(p.getGender().equals("Male")) {%>
-Gender: <input type="radio" name="gender" value="Male" checked="checked">Male
-<input type="radio" name="gender" value="Female">Female<br><br>
-<%}else{ %>
-Gender: <input type="radio" name="gender" value="Male">Male
-<input type="radio" name="gender" value="Female"  checked="checked">Female<br><br>
-<%} %>
-Address: <input type="text"  name="address" value="<%=p.getAddress()%>"><br><br>
-<input type="hidden" name="salary" value="<%=p.getSalary() %>">
-<input type="submit" value="update">
-</form>
+	<br>
+	<center>
+		<h1>Welcome to Employee Update Page</h1>
+		<br> <a href="employee_home.jsp">Home</a> | <a
+			href="view_plot.jsp">View plot</a> | <a href="bought_plot.jsp">Sales
+			Book</a> | <a href="./index.html">Logout</a>
+	</center>
+	<br>
+	<%@page import="com.pojo.Employee,com.realtor.EmployeeBean"%>
+	<%
+		int id = Integer.parseInt(request.getParameter("id"));
+	Employee p = EmployeeBean.getById(id);
+	%>
+	<div class="container">
+		<div class="row justify-content-center align-items-center"
+			style="height: 50vh">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body">
+						<form action="./employee_update" method="post">
+							<input type="hidden" name="id" value="<%=p.getId()%>"> <input
+								type="hidden" name="salary" value="<%=p.getSalary()%>">
+							<div class="form-group">
+								Employee name: <input type="text" class="form-control"
+									name="ename" value="<%=p.getEname()%>">
+							</div>
+							<div class="form-group">
+								Email: <input type="email" class="form-control" name="email"
+									value="<%=p.getEmail()%>">
+							</div>
+							<div class="form-group">
+								Password: <input type="password" name="password"
+									value="<%=p.getPassword()%>" class="form-control">
+							</div>
+							<div class="form-group">
+								phone: <input type="number" class="form-control" name="phone"
+									value="<%=p.getPhone()%>">
+							</div>
+							<div class="form-group">
+								<%
+									if (p.getGender().equals("Male")) {
+								%>
+								Gender:<br> <input type="radio" name="gender" value="Male"
+									checked="checked">Male <input type="radio"
+									name="gender" value="Female">Female
+								<%
+ 	} else {
+ %>
+								Gender: <input type="radio" name="gender" value="Male">Male
+								<input type="radio" name="gender" value="Female"
+									checked="checked">Female
+								<%
+ 	}
+ %>
+							</div>
+							<div class="form-group">
+								Address: <input type="text" class="form-control" name="address"
+									value="<%=p.getAddress()%>">
+							</div>
+							<input type="submit" class="btn btn-primary" value="update">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
