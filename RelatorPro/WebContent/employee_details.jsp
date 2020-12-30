@@ -3,6 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("background.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+</style>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -11,7 +30,7 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body bgcolor="#E6E6FA">
+<body bgcolor="#E6E6FA" class="bg">
 	<br>
 	<center>
 		<h1>Welcome to Empoyee Details Page</h1>
@@ -41,13 +60,14 @@
 	<div class="container">
 		<%@page
 			import="com.pojo.Employee,com.realtor.EmployeeBean,java.util.*"%>
-		<table class="table table-bordered">
+		<table class="table table-bordered table-light">
 			<tr>
-				<td>Employee Name</td>
+				<td>Name</td>
 				<td>Email</td>
 				<td>Phone</td>
 				<td>Address</td>
 				<td>Gender</td>
+				<td>Designation</td>
 				<td>Salary</td>
 				<td>Action</td>
 			</tr>
@@ -69,6 +89,7 @@
 				<td><%=vab.getPhone()%></td>
 				<td><%=vab.getAddress()%></td>
 				<td><%=vab.getGender()%></td>
+				<td><%=vab.getDesignation() %></td>
 				<td><%=vab.getSalary()%></td>
 				<td><a href="admin_update_employee.jsp?id=<%=vab.getId()%>">update</a></td>
 			</tr>

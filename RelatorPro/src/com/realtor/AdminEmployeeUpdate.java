@@ -21,10 +21,11 @@ public class AdminEmployeeUpdate extends HttpServlet {
 		emp.setGender(request.getParameter("gender"));
 		emp.setAddress(request.getParameter("address"));
 		emp.setSalary(Integer.parseInt(request.getParameter("salary")));
+		emp.setDesignation(request.getParameter("designation"));
 		boolean status=false;
 		status=EmployeeUpdateBean.update(emp);
 		if(status) {
-			response.sendRedirect("./admin_home.jsp?id="+emp.getId()+"&msg=Update sucessfully");
+			response.sendRedirect("./employee_details.jsp?msg=Update sucessfully");
 		}
 		else
 			response.sendRedirect("./admin_update_employee.jsp?id="+emp.getId()+"&msg=update failed");

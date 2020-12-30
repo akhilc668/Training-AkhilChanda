@@ -9,6 +9,7 @@ public class Employee {
 	private String password;
 	private String gender;
 	private int salary;
+	private String designation;
 	public int getId() {
 		return id;
 	}
@@ -56,5 +57,11 @@ public class Employee {
 	}
 	public void setSalary(int salary) {
 		this.salary = salary;
+	}
+	public String getDesignation() {
+		return designation;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
 	}	
 }

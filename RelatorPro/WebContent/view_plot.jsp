@@ -3,6 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("background.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+</style>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -11,7 +31,7 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body bgcolor="#E6E6FA">
+<body bgcolor="#E6E6FA" class="bg">
 	<br>
 	<center>
 		<%
@@ -48,7 +68,7 @@
 	</div>
 	<br>
 	<div class="container">
-		<table class="table table-bordered">
+		<table class="table table-bordered table-light">
 			<tr>
 				<td>PlotNo</td>
 				<td>OwnerName</td>

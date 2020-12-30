@@ -20,6 +20,7 @@ public class EmployeeRegister extends HttpServlet {
 		emp.setGender(request.getParameter("gender"));
 		emp.setAddress(request.getParameter("address"));
 		emp.setSalary(Integer.parseInt(request.getParameter("salary")));
+		emp.setDesignation(request.getParameter("designation"));
 		boolean status=false;
 		status=EmployeeRegisterBean.register(emp);
 		if(status) {

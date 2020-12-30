@@ -3,6 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("background.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+</style>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -11,7 +30,7 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body bgcolor="#E6E6FA">
+<body bgcolor="#E6E6FA" class="bg">
 	<br>
 	<center>
 		<h1>Welcome to Employee Update Page</h1>
@@ -34,6 +53,8 @@
 						<form action="./employee_update" method="post">
 							<input type="hidden" name="id" value="<%=p.getId()%>"> <input
 								type="hidden" name="salary" value="<%=p.getSalary()%>">
+								<input
+								type="hidden" name="designation" value="<%=p.getDesignation()%>">
 							<div class="form-group">
 								Employee name: <input type="text" class="form-control"
 									name="ename" value="<%=p.getEname()%>">
@@ -71,6 +92,7 @@
 								Address: <input type="text" class="form-control" name="address"
 									value="<%=p.getAddress()%>">
 							</div>
+							
 							<input type="submit" class="btn btn-primary" value="update">
 						</form>
 					</div>
