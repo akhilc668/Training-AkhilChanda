@@ -114,8 +114,10 @@ Plot p=ViewPlotBean.getById(vab.getPlotId());
 			<td><%=vab.getRemainingAmount() %></td>
 			<td><%=vab.getPaymentStatus() %></td>
 			<td><%=vab.getStatus() %></td>
-			<%if(vab.getPaymentStatus().equals("incomplete")){ %>
+			<%if(vab.getPaymentStatus().equals("incomplete")&&vab.getStatus().equals("Accepted")){ %>
 			<td><a href="./complete_payment.jsp?id=<%=vab.getId()%>&&remainingAmount=<%=vab.getRemainingAmount()%>">Complete Payment</a></td>
+			<%}else if(vab.getStatus().equals("none")){ %>
+			<td>Plot is still not reserved</td>
 			<%}else{ %>
 			<td>Accepted and updated</td>
 			<%} %>
