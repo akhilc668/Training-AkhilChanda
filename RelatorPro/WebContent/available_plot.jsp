@@ -5,21 +5,19 @@
 <head>
 <style>
 body, html {
-  height: 100%;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .bg {
-  /* The image used */
-  background-image: url("background.png");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+	/* The image used */
+	background-image: url("background.png");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
 }
 </style>
 <link
@@ -85,6 +83,11 @@ body, html {
 			} else {
 				l = ViewPlotBean.search(address, venture);
 			}
+			if (l == null) {
+			%>
+			<tr></tr>
+			<%
+				} else {
 			Iterator i = l.iterator();
 			while (i.hasNext()) {
 				Plot vab = (Plot) i.next();
@@ -103,6 +106,7 @@ body, html {
 			</tr>
 			<%
 				}
+			}
 			%>
 		</table>
 	</div>

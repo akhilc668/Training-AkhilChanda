@@ -5,21 +5,19 @@
 <head>
 <style>
 body, html {
-  height: 100%;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .bg {
-  /* The image used */
-  background-image: url("background.png");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+	/* The image used */
+	background-image: url("background.png");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
 }
 </style>
 <link
@@ -56,7 +54,8 @@ body, html {
 				</div>
 			</div>
 		</div>
-	</div><br>
+	</div>
+	<br>
 	<div class="container">
 		<%@page
 			import="com.pojo.Employee,com.realtor.EmployeeBean,java.util.*"%>
@@ -79,6 +78,12 @@ body, html {
 			} else {
 				l = EmployeeBean.search(address);
 			}
+			if (l == null) {
+			%>
+			<tr>
+			</tr>
+			<%
+				} else {
 			Iterator i = l.iterator();
 			while (i.hasNext()) {
 				Employee vab = (Employee) i.next();
@@ -89,12 +94,13 @@ body, html {
 				<td><%=vab.getPhone()%></td>
 				<td><%=vab.getAddress()%></td>
 				<td><%=vab.getGender()%></td>
-				<td><%=vab.getDesignation() %></td>
+				<td><%=vab.getDesignation()%></td>
 				<td><%=vab.getSalary()%></td>
 				<td><a href="admin_update_employee.jsp?id=<%=vab.getId()%>">update</a></td>
 			</tr>
 			<%
 				}
+			}
 			%>
 		</table>
 	</div>
