@@ -11,6 +11,7 @@ public class Plot {
 	private String venture;
 	private String status;
 	private String area;
+	private String filename;
 	public int getId() {
 		return id;
 	}
@@ -71,4 +72,11 @@ public class Plot {
 	public void setArea(String area) {
 		this.area = area;
 	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+	
 }

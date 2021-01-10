@@ -46,32 +46,35 @@ body, html {
 			<div class="col-4">
 				<div class="card">
 					<div class="card-body">
-						<form action="./add_plot" method="post">
+						<form action="./add_plot" method="post" enctype = "multipart/form-data">
 							<div class="form-group">
-								PlotNo: <input type="text" name="plotNo" class="form-control" placeholder="Enter plotNo">
+								PlotNo: <input type="text" name="plotNo" class="form-control" placeholder="Enter plotNo" required="required">
 							</div>
 							<div class="form-group">
 								OwnerName: <input type="text" name="ownerName"
-									class="form-control" placeholder="Enter Owner Name">
+									class="form-control" placeholder="Enter Owner Name" required="required">
 							</div>
 							<div class="form-group">
-								Email: <input type="email" class="form-control" name="email" placeholder="Enter Email">
+								Email: <input type="email" class="form-control" name="email" placeholder="Enter Email" required="required">
 							</div>
 							<div class="form-group">
-								phone: <input type="number" class="form-control" name="phone" placeholder="Enter Phone Number">
+								phone: <input type="number" class="form-control" name="phone" placeholder="Enter Phone Number" required="required">
 							</div>
 							<div class="form-group">
-								Area: <input type="number" class="form-control" name="area" placeholder="Enter In sqft">
+								Area: <input type="number" class="form-control" name="area" placeholder="Enter In sqft" required="required">
 							</div>
 							<div class="form-group">
-								Amount: <input type="number" name="amount" class="form-control" placeholder="Enter Amount">
+								Amount: <input type="number" name="amount" class="form-control" placeholder="Enter Amount" required="required">
 							</div>
 							<div class="form-group">
-								Venture: <input type="text" class="form-control" name="venture" placeholder="Enter Venture">
+								Venture: <input type="text" class="form-control" name="venture" placeholder="Enter Venture" required="required">
 							</div>
 							<div class="form-group">
-								Address: <input type="text" class="form-control" name="address" placeholder="Enter Address">
+								Address: <input type="text" class="form-control" name="address" placeholder="Enter Address" required="required">
 							</div>
+							<div class="form-group">
+								<input type = "file" name = "file" required="required">
+							</div> 
 							<input type="submit" class="btn btn-primary" value="register">
 						</form>
 					</div>

@@ -34,12 +34,10 @@ body, html {
 <body bgcolor="#E6E6FA" class="bg">
 	<br>
 	<center>
-		<%
-			int id = (Integer) session.getAttribute("eid");
-		%>
+		
 		<h1>Welcome to View Plot Page</h1>
 		<br> <a href="employee_home.jsp">Home</a> | <a
-			href="employee_update.jsp?id=<%=id%>">Update employee</a> | <a
+			href="employee_update.jsp">Update employee</a> | <a
 			href="view_plot.jsp">View plot</a> | <a href="bought_plot.jsp">Sales
 			Book</a> | <a href="./index.html">Logout</a>
 	</center>
@@ -79,7 +77,6 @@ body, html {
 				<td><b>amount</b></td>
 				<td><b>Address</b></td>
 				<td><b>Status</b></td>
-				<td><b>Action</b></td>
 			</tr>
 			<%
 				String status = request.getParameter("status");
@@ -103,7 +100,6 @@ body, html {
 				<td><%=vab.getAmount()%></td>
 				<td><%=vab.getAddress()%></td>
 				<td><%=vab.getStatus()%></td>
-				<td><a href="update_plot.jsp?id=<%=vab.getId()%>">update</a></td>
 			</tr>
 			<%
 				}

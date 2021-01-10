@@ -33,12 +33,9 @@ body, html {
 <body bgcolor="#E6E6FA" class="bg">
 	<br>
 	<center>
-		<%
-			int id = (Integer) session.getAttribute("eid");
-		%>
 		<h1>Welcome to Sales Book Page</h1>
 		<br> <br> <a href="employee_home.jsp">Home</a> | <a
-			href="employee_update.jsp?id=<%=id%>">Update employee</a> | <a
+			href="employee_update.jsp">Update employee</a> | <a
 			href="view_plot.jsp">View plot</a> | <a href="bought_plot.jsp">Sales
 			Book</a> | <a href="./index.html">Logout</a>
 	</center>

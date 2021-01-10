@@ -5,21 +5,19 @@
 <head>
 <style>
 body, html {
-  height: 100%;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .bg {
-  /* The image used */
-  background-image: url("background.png");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+	/* The image used */
+	background-image: url("background.png");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
 }
 </style>
 <link
@@ -41,7 +39,7 @@ body, html {
 	<br>
 	<%@page import="com.pojo.Employee,com.realtor.EmployeeBean"%>
 	<%
-		int id = Integer.parseInt(request.getParameter("id"));
+		int id = (Integer) session.getAttribute("eid");
 	Employee p = EmployeeBean.getById(id);
 	%>
 	<div class="container">
@@ -53,8 +51,8 @@ body, html {
 						<form action="./employee_update" method="post">
 							<input type="hidden" name="id" value="<%=p.getId()%>"> <input
 								type="hidden" name="salary" value="<%=p.getSalary()%>">
-								<input
-								type="hidden" name="designation" value="<%=p.getDesignation()%>">
+							<input type="hidden" name="designation"
+								value="<%=p.getDesignation()%>">
 							<div class="form-group">
 								Employee name: <input type="text" class="form-control"
 									name="ename" value="<%=p.getEname()%>">
@@ -92,7 +90,7 @@ body, html {
 								Address: <input type="text" class="form-control" name="address"
 									value="<%=p.getAddress()%>">
 							</div>
-							
+
 							<input type="submit" class="btn btn-primary" value="update">
 						</form>
 					</div>

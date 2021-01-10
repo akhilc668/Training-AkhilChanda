@@ -102,7 +102,7 @@ body, html {
 				<td><%=vab.getAmount()%></td>
 				<td><%=vab.getAddress()%></td>
 				<td><%=vab.getStatus()%></td>
-				<td><a href="buy_plot.jsp?pid=<%=vab.getId()%>">Buy</a></td>
+				<td><a href="plot_details.jsp?pid=<%=vab.getId()%>" class="btn btn-primary">view</a></td>
 			</tr>
 			<%
 				}
