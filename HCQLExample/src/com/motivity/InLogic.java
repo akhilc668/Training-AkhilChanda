@@ -15,6 +15,7 @@ public class InLogic {
 	public static void main(String[] args) {
 		Session se=Config.config();
 		Criteria ct=se.createCriteria(Student.class);
+		//It retrives the values in the given id's
 		System.out.println("Using the collections");
 		Collection<Integer> c1=new ArrayList<Integer>();
 		c1.add(101);

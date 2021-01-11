@@ -13,6 +13,7 @@ public class NotLogic {
 	public static void main(String[] args) {
 		Session se=Config.config();
 		Criteria ct=se.createCriteria(Student.class);
+		//it retrives the values which are id's not equal to given id
 		Criterion c=Restrictions.not(Restrictions.idEq(102));
 		ct.add(c);
 		List li=ct.list();

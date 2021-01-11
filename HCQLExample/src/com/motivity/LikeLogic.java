@@ -13,6 +13,7 @@ public class LikeLogic {
 	public static void main(String[] args) {
 		Session se=Config.config();
 		Criteria ct=se.createCriteria(Student.class);
+		//it retrives the values where the name column having the like condions
 		Criterion c=Restrictions.ilike("name", "%n_");
 		ct.add(c);
 		List li=ct.list();
