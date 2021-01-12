@@ -1,6 +1,7 @@
 package com.motivity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,11 +13,10 @@ import javax.persistence.Table;
 @Table(name = "customer1")
 public class Customer {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "cid")
 	private int id;
+	@Column(name = "cname")
 	private String name;
-	@JoinColumn(insertable = false,name = "id")
-	private int fvid;
 	public int getId() {
 		return id;
 	}
@@ -28,11 +28,5 @@ public class Customer {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public int getFvid() {
-		return fvid;
-	}
-	public void setFvid(int fvid) {
-		this.fvid = fvid;
 	}
 }

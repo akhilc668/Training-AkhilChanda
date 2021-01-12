@@ -16,15 +16,16 @@ public class MainLogic {
 		SessionFactory sf=cf.buildSessionFactory();
 		Session se=sf.openSession();
 		Transaction tx=se.beginTransaction();
-		Vendor v=new Vendor();
-		v.setId(1);
-		v.setName("Flipkart");
 		Customer c=new Customer();
+		c.setId(201);
 		c.setName("Nikhil");
-		c.setFvid(v.getId());
 		Customer c1=new Customer();
+		c1.setId(202);
 		c1.setName("Sunny");
-		c1.setFvid(v.getId());
+		Vendor v=new Vendor();
+		v.setId(101);
+		v.setName("Flipkart");
+		
 		Set<Customer> s=new HashSet<>();
 		s.add(c);
 		s.add(c1);
