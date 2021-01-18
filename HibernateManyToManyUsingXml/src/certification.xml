@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+<class name="com.motivity.Certification" table="certification">
+<id name="id" column="cid"></id>
+<property name="name" column="cname"></property>
+<property name="duration" column="duration"></property>
+<set name="trainees" cascade="all" table="trainee_certification">
+<key column="cid"/>
+<many-to-many class="com.motivity.Trainee" column="tid"></many-to-many>
+</set>
+</class>
+</hibernate-mapping>
