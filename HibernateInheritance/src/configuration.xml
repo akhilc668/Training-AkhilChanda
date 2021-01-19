@@ -11,8 +11,10 @@
 		
 		<property name="show_sql">true</property>
 		<property name="dialet">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		
-		<mapping resource="payment.xml"/>
+		<mapping class="com.motivity.Payment"/>
+		<mapping class="com.motivity.Cheque"/>
+		<mapping class="com.motivity.CreditCard"/>
 	</session-factory>
 </hibernate-configuration>
