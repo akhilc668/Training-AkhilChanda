@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.motivity.Customer" table="customers2">
+<id name="id" column="cid"></id>
+<property name="name" column="cname"></property>
+<property name="fvid" column="fvid" insert="false"></property>
+</class>
+</hibernate-mapping>
