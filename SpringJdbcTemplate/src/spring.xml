@@ -1,0 +1,43 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="connect"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/motivity" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg>
+			<ref bean="connect" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="jTemplate" class="com.ex.SpringSelect">
+		<property name="jdbcTemplate">
+			<ref bean="jt" />
+		</property>
+	</bean>
+
+	<bean id="jTemplatei" class="com.ex.SpringInsert">
+		<property name="jdbcTemplate">
+			<ref bean="jt" />
+		</property>
+	</bean>
+	<bean id="jTemplateu" class="com.ex.SpringUpdate">
+		<property name="jdbcTemplate">
+			<ref bean="jt" />
+		</property>
+	</bean>
+	<bean id="jTemplated" class="com.ex.SpringDelete">
+		<property name="jdbcTemplate">
+			<ref bean="jt" />
+		</property>
+	</bean>
+
+</beans>

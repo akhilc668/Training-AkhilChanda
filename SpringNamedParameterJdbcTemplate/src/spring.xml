@@ -1,0 +1,44 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="connect"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/motivity" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+
+	<bean id="npjt"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg>
+			<ref bean="connect" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="npjTemplate" class="com.ex.SpringSelect">
+		<property name="npjdbcTemplate">
+			<ref bean="npjt" />
+		</property>
+	</bean>
+
+	<bean id="npjTemplatei" class="com.ex.SpringInsert">
+		<property name="npjdbcTemplate">
+			<ref bean="npjt" />
+		</property>
+	</bean>
+	<bean id="npjTemplateu" class="com.ex.SpringUpdate">
+		<property name="npjdbcTemplate">
+			<ref bean="npjt" />
+		</property>
+	</bean>
+	<bean id="npjTemplated" class="com.ex.SpringDelete">
+		<property name="npjdbcTemplate">
+			<ref bean="npjt" />
+		</property>
+	</bean>
+
+</beans>
