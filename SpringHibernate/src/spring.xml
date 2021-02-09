@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/motivity" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="mysessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mappingResources">
+			<list>
+				<value>employee.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="template"
+		class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="mysessionFactory"></property>
+		<property name="checkWriteOperations" value="false"></property>
+	</bean>
+
+	<bean id="hTemplates" class="com.ex.OperationDisplay">
+		<property name="hbTemplate">
+			<ref bean="template" />
+		</property>
+	</bean>
+	
+	<bean id="hTemplatei" class="com.ex.OperationInsert">
+		<property name="hbTemplate">
+			<ref bean="template" />
+		</property>
+	</bean>
+	
+	<bean id="hTemplateu" class="com.ex.OperationUpdate">
+		<property name="hbTemplate">
+			<ref bean="template" />
+		</property>
+	</bean>
+	
+	<bean id="hTemplated" class="com.ex.OperationDelete">
+		<property name="hbTemplate">
+			<ref bean="template" />
+		</property>
+	</bean>
+
+</beans>
