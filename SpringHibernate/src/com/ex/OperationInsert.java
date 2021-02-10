@@ -15,9 +15,11 @@ public class OperationInsert {
 		this.hbTemplate = hbTemplate;
 	}
 
-	
-	public void insert(OperationInsert si) throws Exception {
-		Session se = si.hbTemplate.getSessionFactory().openSession();
+	public HibernateTemplate getHbTemplate() {
+		return hbTemplate;
+	}
+	public void insert() throws Exception {
+		Session se = getHbTemplate().getSessionFactory().openSession();
 		Scanner sc = new Scanner(System.in);
 		String choice = "";
 		do {

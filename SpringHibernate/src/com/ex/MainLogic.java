@@ -19,7 +19,7 @@ public class MainLogic {
 				si.insert(si);
 			}else if(choice == 2) {
 				OperationDisplay si = (OperationDisplay) context.getBean("hTemplates");
-				si.display(si);
+				si.display();
 			}else if(choice == 3) {
 				OperationUpdate si = (OperationUpdate) context.getBean("hTemplateu");
 				si.update(si);

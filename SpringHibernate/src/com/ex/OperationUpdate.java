@@ -15,9 +15,13 @@ public class OperationUpdate {
 		this.hbTemplate = hbTemplate;
 	}
 
+	public HibernateTemplate getHbTemplate() {
+		return hbTemplate;
+	}
 	
-	public void update(OperationUpdate su) throws Exception {
-		Session se = su.hbTemplate.getSessionFactory().openSession();
+	
+	public void update() throws Exception {
+		Session se =getHbTemplate().getSessionFactory().openSession();
 		Scanner sc = new Scanner(System.in);
 		int choice = 0, a = 0;
 		String option = "";

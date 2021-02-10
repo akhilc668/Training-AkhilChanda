@@ -16,8 +16,12 @@ public class OperationDisplay {
 		this.hbTemplate = hbTemplate;
 	}
 	
-	public void display(OperationDisplay sd) throws Exception {
-		Session se = sd.hbTemplate.getSessionFactory().openSession();
+	public HibernateTemplate getHbTemplate() {
+		return hbTemplate;
+	}
+	
+	public void display() throws Exception {
+		Session se =getHbTemplate().getSessionFactory().openSession();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your choice \n 1.Retrieve All details\n 2. Retrieve sinlge row");
 		int choice = sc.nextInt();

@@ -15,9 +15,12 @@ public class OperationDelete {
 		this.hbTemplate = hbTemplate;
 	}
 	
+	public HibernateTemplate getHbTemplate() {
+		return hbTemplate;
+	}
 	
-	public void delete(OperationDelete sd) throws Exception {
-		Session se =sd.hbTemplate.getSessionFactory().openSession();
+	public void delete() throws Exception {
+		Session se =getHbTemplate().getSessionFactory().openSession();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your choice \n 1.Delete All details\n 2. Delete sinlge row");
 		int choice = sc.nextInt();
