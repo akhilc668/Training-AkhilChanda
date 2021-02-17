@@ -1,0 +1,19 @@
+
+<h1>on click</h1>
+<table>
+    <tr>
+
+        <td><button class="btn btn-primary m-5" (click)="myfun1()">Like</button></td>
+
+        <td><span class="text-primary">{{ msg }}</span></td>
+
+        <td><button class="btn btn-primary m-5" (click)="myfun2()">Dislike</button></td>
+    </tr>
+</table>
+<h1>on change</h1>
+<div class="form-group">
+    <label for="">SNO</label>
+    <input type="number" [(ngModel)]="sno"  class="form-control" (keypress)="myfun3()"/>
+</div>
+
+<span class="text-primary">{{ msg1 }}</span>

@@ -1,0 +1,9 @@
+table{
+    width: 25%;
+    text-align: center;
+    border: 2px solid darkblue;
+    background-color: goldenrod;
+}
+tr,td{
+    border: 2px solid indigo;
+}

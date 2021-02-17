@@ -1,0 +1,32 @@
+
+
+<div class="container bg-light m-5">
+    <pre>
+    {{ reg.value | json }}
+    </pre>
+    
+    <form #reg="ngForm">
+    
+            <div class="form-group">
+                <label for="">ENTER FIRSTNAME</label>
+                <input type="text" class="form-control" name="firstname" [(ngModel)]="formdata.firstname" />
+            </div>
+    
+    
+            <div class="form-group">
+                <label for="">ENTER LASTNAME</label>
+                <input type="text" class="form-control" name="lastname" [(ngModel)]="formdata.lastname" />
+    
+            </div>
+    
+            <div class="form-group">
+                <label for="">ENTER EMAIL-ID</label>
+                <input type="text" class="form-control" name="email" [(ngModel)]="formdata.email" />
+    
+            </div>
+    
+    </form>
+    
+</div>
+    
+    
