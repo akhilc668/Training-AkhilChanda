@@ -11,6 +11,7 @@ import About from './About.js'
 import Services from './Services.js'
 import Contact from './Contact.js'
 import Courses from './Courses.js'
+import Signup from './Signup'
 
 
 const RoutingsHeader=()=> 
@@ -32,6 +33,7 @@ const RoutingsHeader=()=>
                 <Route path="/services" component={Services} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/courses" component={Courses} />
+		<Route path="/signup" component={Signup} />
 
 
 

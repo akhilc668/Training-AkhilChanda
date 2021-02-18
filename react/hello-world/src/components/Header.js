@@ -41,7 +41,10 @@ const Header=()=> {
             <li className="nav-item">
                     <Link className="nav-link text-white" to="/courses">Courses</Link>
             </li>
-           
+
+            <li className="nav-item">
+                    <Link className="nav-link text-white" to="/signup">Signup</Link>
+            </li>           
 
             </ul>
         </div>
