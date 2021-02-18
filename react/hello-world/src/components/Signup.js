@@ -33,6 +33,10 @@ class Signup extends Component {
         this.setState({ city: e.target.value })
     }
 
+    HandlePhoneInput=(e)=>
+    {
+        this.setState({ phone: e.target.value })
+    }
 
 
 //submit_button
@@ -75,6 +79,15 @@ HandleSubmitForm=()=>
                         class="form-control" 
                         value={this.state.city}
                         onChange={this.HandleCityInput.bind(this) } />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input 
+                        type="phone" 
+                        class="form-control" 
+                        value={this.state.phone}
+                        onChange={this.HandlePhoneInput.bind(this) } />
                     </div>
                     
                     <button 
