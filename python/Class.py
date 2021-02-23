@@ -15,3 +15,13 @@ class A:
    
 obj = A("Akhil",18)
 obj.display()
+
+        
+class B(A):
+    def __init__(self):
+        super().__init__("Akhila",21)
+        print("in class B")
+    def display(self):
+        super().display()
+B = B()
+B.display() 

@@ -9,6 +9,10 @@ import { TestComponent } from './test/test.component';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { StyleComponent } from './style/style.component';
+import { FormControlComponent } from './form-control/form-control.component';
+import { FormArrayComponent } from './form-array/form-array.component';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { FormGroupComponent } from './form-group/form-group.component';
 
 
 @NgModule({
@@ -18,6 +22,10 @@ import { StyleComponent } from './style/style.component';
     Test1Component,
     Test2Component,
     StyleComponent,
+    FormControlComponent,
+    FormArrayComponent,
+    FormBuilderComponent,
+    FormGroupComponent,
   ],
   imports: [
     BrowserModule,

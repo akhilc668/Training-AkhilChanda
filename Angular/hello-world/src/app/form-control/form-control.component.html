@@ -1,0 +1,30 @@
+<div class="m-5">
+
+
+    
+    
+        <fieldset class="border">
+            <legend class="bg-primary">Personal details</legend>
+            <div class="form-group">
+              <label for="exampleInputEmail1">NAME</label>
+              <input type="text" class="form-control" [formControl]="uname">
+            </div>
+            
+            <div class="form-group">
+              <label>EMAIL</label>
+              <input type="email" class="form-control" [formControl]="email">
+            </div>
+            
+        </fieldset>
+    
+            <button type="submit" class="btn btn-primary" (click)="myfun()"> submit</button>
+          
+        
+        
+        
+    </div>
+    <pre>
+        {{check | json}}
+    </pre>
+
+  

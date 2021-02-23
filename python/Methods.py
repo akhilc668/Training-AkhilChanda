@@ -5,6 +5,7 @@ Created on Fri Feb 19 16:59:24 2021
 @author: Akhil Chanda
 """
 
+
 def factorial(num):
     fact = 1
     for i in range(num,0,-1):
@@ -14,3 +15,10 @@ def factorial(num):
 
 num = int(input("enter a number: "))
 print("factorial of ",num,"is:",factorial(num))
+
+
+def add():
+    a = b = c = d = 10
+    return a+b,c+d
+
+print(add())

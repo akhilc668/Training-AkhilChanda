@@ -20,8 +20,5 @@ lastname:"m",
 email:"kumar@gmail.com",
 }
 
-myfun(){
-  
-}
 
 }

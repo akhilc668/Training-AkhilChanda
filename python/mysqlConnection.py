@@ -16,6 +16,7 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
+"""
 sql = "delete from student1 where sid=%s"
 val = (106,)
 
@@ -26,7 +27,7 @@ mydb.commit()
 print(mycursor.rowcount, "record deleted.")
 
 
-"""sql = "update student1 set sname=%s where sid=%s"
+sql = "update student1 set sname=%s where sid=%s"
 val = ("Banu",105)
 
 mycursor.execute(sql, val)
@@ -67,11 +68,11 @@ mycursor.execute("SELECT * FROM student1")
 myresult = mycursor.fetchall()
 
 for x in myresult:
-  print(x)
+  print(x)"""
   
-mycursor.execute("SELECT * FROM student1 where sid='101'")
+mycursor.execute("SELECT * FROM student1 where sid='106'")
 
 myresult = mycursor.fetchall()
 
 for x in myresult:
-  print(x)"""
+  print(x)
