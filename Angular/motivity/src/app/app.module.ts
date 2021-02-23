@@ -7,6 +7,7 @@ import { EmployeesComponent } from './pages/employees/employees.component';
 import { EditComponent } from './pages/employees/edit/edit.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './pages/employees/search/search.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     EmployeesComponent,
     EditComponent,
     RoutingComponents,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

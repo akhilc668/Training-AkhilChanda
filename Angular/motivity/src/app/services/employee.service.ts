@@ -45,4 +45,14 @@ export class EmployeeService {
     oemployee.email = employee.email;
     oemployee.phone = employee.phone;
   }
+
+  onSearch(name:string,email:string){
+    let employees :Employee []= [];
+    if(email === "" && name!= ""){
+    employees = this.employees.filter(x=>x.name === name);
+    }else{
+      employees = this.employees.filter(x=>x.email === email)
+    }
+    return employees;
+  }
 }

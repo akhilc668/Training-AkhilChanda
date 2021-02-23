@@ -23,10 +23,13 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
     this.id=+this.route.snapshot.params['id'];
     this.header = this.id === 0 ? 'Add Employee': 'Edit Employee';
+    if(this.id === 0){
+      this.employee.id= this.employeeservice.employees.length+1;
+    }
     if(this.id != 0){
       this.employee = <Employee> this.employeeservice.onGetEmployee(this.id);
     }
-    this.employee.id= this.employeeservice.employees.length+1;
+    
   
   }
 
@@ -47,7 +50,5 @@ export class EditComponent implements OnInit {
     }
     this.router.navigateByUrl('');
   }
-
-  
 
 }

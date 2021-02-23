@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditComponent } from './pages/employees/edit/edit.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
+import { SearchComponent } from './pages/employees/search/search.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: "employee/edit/:id",
     component: EditComponent
+  },
+  {
+    path: "search",
+    component: SearchComponent
   }
 ];
 
@@ -26,5 +31,6 @@ export class AppRoutingModule { }
 
 export const RoutingComponents=[
   EmployeesComponent,
-  EditComponent
+  EditComponent,
+  SearchComponent
 ];

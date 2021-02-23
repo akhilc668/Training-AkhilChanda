@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from "src/app/model/employee.model";
 @Component({
@@ -16,6 +17,14 @@ export class EmployeesComponent implements OnInit {
 
   onDelete(id:number){
     this.employeeservice.onDelete(id);
+  }
+  
+  ename:string="";
+  email:string="";
+  onSearch(form: NgForm){
+    this.ename= form.value.name;
+    this.email= form.value.email;
+    this.employees= this.employeeservice.onSearch(this.ename,this.email);
   }
 
 }
