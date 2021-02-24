@@ -21,6 +21,7 @@ const routes: Routes = [
     path: "search",
     component: SearchComponent
   }
+  
 ];
 
 @NgModule({
@@ -29,8 +30,8 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents=[
-  EmployeesComponent,
-  EditComponent,
-  SearchComponent
-];
+// export const RoutingComponents=[
+//   EmployeesComponent,
+//   EditComponent,
+//   SearchComponent
+// ];

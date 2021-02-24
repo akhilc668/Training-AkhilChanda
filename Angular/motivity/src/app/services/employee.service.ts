@@ -18,6 +18,7 @@ export class EmployeeService {
       phone: 2222
     }
   ];
+  latestId:number = this.employees.length;
   constructor() { }
 
   onGet(){
@@ -26,13 +27,13 @@ export class EmployeeService {
 
   onAdd(employee: Employee){
     this.employees.push(employee);
+    this.latestId=employee.id;
   }
 
   onDelete(id: number){
     let emp = <Employee>this.employees.find(x=>x.id === id);
     let index = this.employees.indexOf(emp,0)
     this.employees.splice(index,1);
-
   }
 
   onGetEmployee(id: number){
