@@ -9,7 +9,7 @@ export class EmployeeService {
       id:1,
       name:"Akhil",
       email: "akhil@gmail.com",
-      phone: 1111
+      phone: 9999
     },
     {
       id:2,

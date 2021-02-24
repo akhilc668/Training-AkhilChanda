@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Employee } from 'src/app/model/employee.model';
 import { EmployeeService } from 'src/app/services/employee.service';
 
@@ -9,19 +9,17 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  searchText:any;
+  
   employees: Employee[] =[];
 
+  
   constructor(private empservice:EmployeeService) { }
 
   ngOnInit(): void {
     this.employees = this.empservice.onGet();
   }
-  ename:string="";
-  email:string="";
-  onSearch(form: NgForm){
-    this.ename= form.value.name;
-    this.email= form.value.email;
-    this.employees= this.empservice.onSearch(this.ename,this.email);
-  }
+  
+  
 
 }
