@@ -12,6 +12,7 @@ import Services from './Services.js'
 import Contact from './Contact.js'
 import Courses from './Courses.js'
 import Signup from './Signup'
+import Propsobject from './Propsobject.js';
 
 
 const RoutingsHeader=()=> 
@@ -25,7 +26,6 @@ const RoutingsHeader=()=>
                 <Header />   <br/><br/>
                
                {/* navbar Component */ }
-              
                 
                 <Route exact path="/" component={Home} />
                 <Route path="/home" component={Home} />
@@ -33,7 +33,8 @@ const RoutingsHeader=()=>
                 <Route path="/services" component={Services} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/courses" component={Courses} />
-		<Route path="/signup" component={Signup} />
+		        <Route path="/signup" component={Signup} />
+                <Route path="/propobj" component={Propsobject}/>
 
 
 

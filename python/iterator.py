@@ -11,7 +11,7 @@ i=iter(List)
 
 for x in range(len(List)):
     print(next(i))
-    
+
     
 print("\nIterator without for loop")
 i=iter(List)
@@ -21,4 +21,5 @@ print(next(i))
 print(next(i))
 print(next(i))
 print(next(i))
+
 

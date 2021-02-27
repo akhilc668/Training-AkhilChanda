@@ -44,6 +44,10 @@ const Header=()=> {
 
             <li className="nav-item">
                     <Link className="nav-link text-white" to="/signup">Signup</Link>
+            </li>
+
+            <li className="nav-item">
+                    <Link className="nav-link text-white" to="/propobj">Propsobject</Link>
             </li>           
 
             </ul>
