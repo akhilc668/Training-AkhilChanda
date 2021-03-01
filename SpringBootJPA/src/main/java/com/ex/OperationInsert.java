@@ -1,6 +1,5 @@
 package com.ex;
 
-
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +10,14 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 @Service
-@Repository
 public class OperationInsert {
 	@Autowired
-	HibernateTemplate hbTemplate;
-	
+	EmployeeRepository er;
+
 	public void insert() throws Exception {
-		Session se = hbTemplate.getSessionFactory().openSession();
 		Scanner sc = new Scanner(System.in);
 		String choice = "";
 		do {
-			Transaction tx = se.beginTransaction();
 			Employee e = new Employee();
 			System.out.println("enter employee id: ");
 			e.setId(sc.nextInt());
@@ -39,14 +35,12 @@ public class OperationInsert {
 			e.setPhone(sc.next());
 			System.out.println("enter the date of Join :");
 			e.setDOJ(sc.next());
-			Object s = se.save(e);
-			tx.commit();
+			Object s = er.save(e);
 			if (s != null) {
 				System.out.println("Record inserted");
 			}
 			System.out.println("Do you want to continue (y/n): ");
 			choice = sc.next();
 		} while (choice.equalsIgnoreCase("y"));
-		se.close();
 	}
 }
