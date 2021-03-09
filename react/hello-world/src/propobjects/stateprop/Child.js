@@ -12,7 +12,6 @@ class Child extends React.Component {
                   <div className="container py-5">
 
                         <h3>CHILD COMPONENT</h3>
-
                         {this.props.id} - {this.props.name} - {this.props.email}-{this.props.phone}
 
                   </div>
