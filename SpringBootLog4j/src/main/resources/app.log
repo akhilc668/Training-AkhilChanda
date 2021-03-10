@@ -1,0 +1,18 @@
+2021-03-04 13:09:38,584 [main] INFO  com.ex.SpringBootLog - Starting SpringBootLog using Java 15.0.1 on LAPTOP-VIIPEI0O with PID 16608 (F:\STS\SpringBootLog4j\target\classes started by Akhil Chanda in F:\STS\SpringBootLog4j)
+2021-03-04 13:09:38,589 [main] INFO  com.ex.SpringBootLog - No active profile set, falling back to default profiles: default
+2021-03-04 13:09:39,372 [main] INFO  com.ex.SpringBootLog - Started SpringBootLog in 1.178 seconds (JVM running for 2.387)
+2021-03-04 13:09:39,375 [main] INFO  com.ex.MyRunner - Information message
+2021-03-04 13:09:39,376 [main] WARN  com.ex.MyRunner - Warning message
+2021-03-04 13:09:39,376 [main] ERROR com.ex.MyRunner - This is a normal error
+2021-03-04 13:09:39,383 [main] INFO  com.ex2.MyRun - Information message from MyRun
+2021-03-04 13:09:39,383 [main] WARN  com.ex2.MyRun - Warning message from MyRun
+2021-03-04 13:09:39,383 [main] ERROR com.ex2.MyRun - This is a normal error from MyRun
+2021-03-08 11:17:13,822 [main] INFO  com.ex.SpringBootLog - Starting SpringBootLog using Java 15.0.1 on LAPTOP-VIIPEI0O with PID 19908 (F:\STS\SpringBootLog4j\target\classes started by Akhil Chanda in F:\STS\SpringBootLog4j)
+2021-03-08 11:17:13,834 [main] INFO  com.ex.SpringBootLog - No active profile set, falling back to default profiles: default
+2021-03-08 11:17:14,754 [main] INFO  com.ex.SpringBootLog - Started SpringBootLog in 1.42 seconds (JVM running for 2.992)
+2021-03-08 11:17:14,758 [main] INFO  com.ex.MyRunner - Information message
+2021-03-08 11:17:14,758 [main] WARN  com.ex.MyRunner - Warning message
+2021-03-08 11:17:14,759 [main] ERROR com.ex.MyRunner - This is a normal error
+2021-03-08 11:17:14,760 [main] INFO  com.ex2.MyRun - Information message from MyRun
+2021-03-08 11:17:14,761 [main] WARN  com.ex2.MyRun - Warning message from MyRun
+2021-03-08 11:17:14,761 [main] ERROR com.ex2.MyRun - This is a normal error from MyRun
