@@ -13,6 +13,7 @@ import { FormControlComponent } from './form-control/form-control.component';
 import { FormArrayComponent } from './form-array/form-array.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { FormGroupComponent } from './form-group/form-group.component';
+import { DemotesterComponent } from './demotester/demotester.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FormGroupComponent } from './form-group/form-group.component';
     FormArrayComponent,
     FormBuilderComponent,
     FormGroupComponent,
+    DemotesterComponent,
   ],
   imports: [
     BrowserModule,
